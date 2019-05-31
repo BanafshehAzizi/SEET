@@ -1,0 +1,23 @@
+//Mutant: Deleting Competitor2Choice rule (line 17:1-23:2 of original transformation)
+rule Competition2Application
+	transform c : Competition!Competition
+	to a : TVApp!Application, v : TVApp!Vote {
+
+	a.name = c.name + " Application";
+	v.name = "Who will win the " + c.name + "?";	
+	a.contents.add(v);
+	
+	for (g in c.groups) {
+		v.contents.add(g.equivalent());
+		for (comp in g.competitors) {
+			v.contents.add(comp.equivalent());
+		}
+	}
+}
+
+rule Group2Label
+	transform g : Competition!Group
+	to l : TVApp!Label {
+	
+	l.name = "Group " + g.name;
+}

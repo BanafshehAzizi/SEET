@@ -1,0 +1,69 @@
+pre {
+	"Running ETL".println();
+}
+
+rule Member2Male
+	transform s : Families!Member
+	to t : Persons!Male {
+	
+	guard : s.isMale()
+	
+	if (s.familyDaughter.isDefined()) {
+			t.fullName = s.firstName + " " + s.familyDaughter.lastName;
+	} else {
+		if (s.familySon.isDefined()) {
+			t.fullName = s.firstName + " " + s.familySon.lastName;
+		} else {
+			if (s.familyMother.isUndefined()) {
+				t.fullName = s.firstName + " " + s.familyFather.lastName;
+			} else {
+				t.fullName = s.firstName + " " + s.familyMother.lastName;
+			}
+		}
+	}
+}
+
+rule Member2Male
+	transform s : Families!Member
+	to t : Persons!Female {
+	
+	guard : s.isFemale()
+	
+	if (s.familyMother.isDefined()) {
+			t.fullName = s.firstName + " " + s.familyMother.lastName;
+	} else {
+		if (s.familyFather.isDefined()) {
+			t.fullName = s.firstName + " " + s.familyFather.lastName;
+		} else {
+			if (s.familySon.isUndefined()) {
+				t.fullName = s.firstName + " " + s.familyDaughter.lastName;
+			} else {
+					t.fullName = s.firstName + " " + s.familySon.lastName;
+			}
+		}
+	}
+}
+
+operation Families!Member isFemale() : Boolean {
+	if (self.familyMother.isDefined()) {																				
+		return true;
+	} else {
+		if (self.familyDaughter.isDefined()) {																				
+			return true;
+		} else {
+			return false;
+		}																			
+	}
+}
+
+operation Families!Member isMale() : Boolean {
+	if (self.familyMother.isDefined()) {																				
+		return false;
+	} else {
+		if (self.familyDaughter.isDefined()) {																				
+			return false;
+		} else {
+			return true;
+		}																			
+	}
+}

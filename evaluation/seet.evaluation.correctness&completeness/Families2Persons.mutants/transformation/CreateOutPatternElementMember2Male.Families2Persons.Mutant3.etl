@@ -1,0 +1,50 @@
+// Mutatnt: Creating outpattern element of Member2Male rule (line 7:8-7:24 of original transformation)
+pre {
+	"Running ETL".println();
+}
+
+rule Member2Male 
+	transform s : Families!Member
+	to t : Persons!Male, t1 : Persons!Male {
+	
+	guard : not s.isFemale()
+	
+	t.fullName = s.firstName + " " + s.familyName();
+}
+
+rule Member2Female
+	transform s : Families!Member
+	to t : Persons!Female {
+	
+	guard : s.isFemale()
+	
+	t.fullName = s.firstName + " " + s.familyName();
+}
+
+operation Families!Member isFemale() : Boolean {
+	if (self.familyMother.isDefined()) {																				
+		return true;
+	} else {
+		if (self.familyDaughter.isDefined()) {																				
+			return true;
+		} else {
+			return false;
+		}																			
+	}
+}
+
+operation Families!Member familyName() : String {
+	if (self.familyFather.isDefined()) {
+		return self.familyFather.lastName;
+	} else {
+		if (self.familyMother.isDefined()) {
+			return self.familyMother.lastName;
+		} else {
+			if (self.familySon.isDefined()) {
+				return self.familySon.lastName;
+			} else {
+				return self.familyDaughter.lastName;
+			}
+		}
+	}
+}

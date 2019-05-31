@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="SEET"
+            nameFilter="*.etl"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               class="seet.ui.StartWizard"
+               icon="icon/Logo.png"
+               id="SEET.action1"
+               label="SEET">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>
