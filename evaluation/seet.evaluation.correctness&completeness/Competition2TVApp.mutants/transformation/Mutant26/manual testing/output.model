@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TVAppDsl="TVAppDsl">
+  <TVAppDsl:Choice name="Competitor1"/>
+  <TVAppDsl:Menu/>
+</xmi:XMI>

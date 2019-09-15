@@ -1,0 +1,8 @@
+Path Condition1: Competition.allInstances() -> size() <> 0 and Competitor.allInstances() -> size() <> 0 and Group.allInstances() -> size() <> 0
+Path Condition2: Competition.allInstances() -> size() <> 0 and Competitor.allInstances() -> size() <> 0 and not Group.allInstances() -> size() <> 0
+Path Condition3: Competition.allInstances() -> size() <> 0 and not Competitor.allInstances() -> size() <> 0 and Group.allInstances() -> size() <> 0
+Path Condition4: Competition.allInstances() -> size() <> 0 and not Competitor.allInstances() -> size() <> 0 and not Group.allInstances() -> size() <> 0
+Path Condition5: not Competition.allInstances() -> size() <> 0 and Competitor.allInstances() -> size() <> 0 and Group.allInstances() -> size() <> 0
+Path Condition6: not Competition.allInstances() -> size() <> 0 and Competitor.allInstances() -> size() <> 0 and not Group.allInstances() -> size() <> 0
+Path Condition7: not Competition.allInstances() -> size() <> 0 and not Competitor.allInstances() -> size() <> 0 and Group.allInstances() -> size() <> 0
+Path Condition8: not Competition.allInstances() -> size() <> 0 and not Competitor.allInstances() -> size() <> 0 and not Group.allInstances() -> size() <> 0

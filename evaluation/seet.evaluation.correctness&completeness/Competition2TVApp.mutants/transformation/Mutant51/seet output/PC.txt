@@ -1,0 +1,4 @@
+Path Condition1: Competitor.allInstances() -> size() <> 0 and Group.allInstances() -> size() <> 0
+Path Condition2: Competitor.allInstances() -> size() <> 0 and not Group.allInstances() -> size() <> 0
+Path Condition3: not Competitor.allInstances() -> size() <> 0 and Group.allInstances() -> size() <> 0
+Path Condition4: not Competitor.allInstances() -> size() <> 0 and not Group.allInstances() -> size() <> 0

@@ -1,0 +1,5 @@
+Path Condition1: Member.allInstances() -> size() <> 0 and Member.familyFather.isDefined()
+Path Condition2: Member.allInstances() -> size() <> 0 and not Member.familyFather.isDefined() and Member.familyDaughter.isDefined() and not Member.familyMother.isDefined() and not Member.familySon.isDefined()
+Path Condition3: Member.allInstances() -> size() <> 0 and not Member.familyFather.isDefined() and not Member.familyDaughter.isDefined() and Member.familyMother.isDefined()
+Path Condition4: Member.allInstances() -> size() <> 0 and not Member.familyFather.isDefined() and not Member.familyDaughter.isDefined() and not Member.familyMother.isDefined() and Member.familySon.isDefined()
+Path Condition5: not Member.allInstances() -> size() <> 0

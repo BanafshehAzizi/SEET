@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<families:Family xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:families="families" xmi:id="_jTmrIMNpEemSxII3PSqSxQ" lastName="Smith">
+  <father xmi:id="_i6SUgMQfEemG1J4pumCKoQ" firstName="Jack"/>
+</families:Family>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<CompetitionDsl:Competition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:CompetitionDsl="CompetitionDsl" xmi:id="_CDaeQMyoEemK1c78sAsOmg" name="Competition1">
+  <groups xmi:id="_fjkZYMy8EemK1c78sAsOmg" name="Group1" competitors="_Y9igkMy8EemK1c78sAsOmg"/>
+  <competitors xmi:id="_Y9igkMy8EemK1c78sAsOmg" name="Competitor1" information="Information1" group="_fjkZYMy8EemK1c78sAsOmg"/>
+</CompetitionDsl:Competition>

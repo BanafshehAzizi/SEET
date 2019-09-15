@@ -1,0 +1,3237 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CFG="CFG" xmlns:eol="http://www.eclipse.org/epsilon/eol" xmlns:etl="http://www.eclipse.org/epsilon/etl">
+  <CFG:CFG>
+    <nodes name="1" outgoing="/0/@nodes.1 /0/@nodes.2" visited="true">
+      <EOLElement xsi:type="etl:TransformationRule">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#/"/>
+        <region>
+          <start line="2"/>
+          <end line="16" column="1"/>
+        </region>
+        <name container="/0/@nodes.0/@EOLElement" name="Competition2Application">
+          <region>
+            <start line="2" column="5"/>
+            <end line="2" column="28"/>
+          </region>
+        </name>
+        <source container="/0/@nodes.0/@EOLElement">
+          <region>
+            <start line="3" column="11"/>
+            <end line="3" column="38"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/0/@nodes.0/@EOLElement/@source" modelName="Competition" elementName="Competition">
+            <region>
+              <start line="3" column="15"/>
+              <end line="3" column="38"/>
+            </region>
+          </resolvedType>
+          <name container="/0/@nodes.0/@EOLElement/@source" name="c">
+            <region>
+              <start line="3" column="11"/>
+              <end line="3" column="12"/>
+            </region>
+          </name>
+        </source>
+        <targets container="/0/@nodes.0/@EOLElement">
+          <region>
+            <start line="4" column="4"/>
+            <end line="4" column="25"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/0/@nodes.0/@EOLElement/@targets.0" modelName="TVApp" elementName="Application">
+            <region>
+              <start line="4" column="8"/>
+              <end line="4" column="25"/>
+            </region>
+          </resolvedType>
+          <name container="/0/@nodes.0/@EOLElement/@targets.0" name="a">
+            <region>
+              <start line="4" column="4"/>
+              <end line="4" column="5"/>
+            </region>
+          </name>
+        </targets>
+        <targets container="/0/@nodes.0/@EOLElement">
+          <region>
+            <start line="4" column="27"/>
+            <end line="4" column="41"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/0/@nodes.0/@EOLElement/@targets.1" modelName="TVApp" elementName="Vote">
+            <region>
+              <start line="4" column="31"/>
+              <end line="4" column="41"/>
+            </region>
+          </resolvedType>
+          <name container="/0/@nodes.0/@EOLElement/@targets.1" name="v">
+            <region>
+              <start line="4" column="27"/>
+              <end line="4" column="28"/>
+            </region>
+          </name>
+        </targets>
+        <body container="/0/@nodes.0/@EOLElement">
+          <region>
+            <start line="6" column="1"/>
+            <end line="15" column="2"/>
+          </region>
+          <statements xsi:type="eol:AssignmentStatement" container="/0/@nodes.0/@EOLElement/@body">
+            <region>
+              <start line="6" column="1"/>
+              <end line="6" column="34"/>
+            </region>
+            <lhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.0">
+              <region>
+                <start line="6" column="1"/>
+                <end line="6" column="7"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.0/@lhs" name="a">
+                <region>
+                  <start line="6" column="1"/>
+                  <end line="6" column="2"/>
+                </region>
+              </target>
+              <property container="/0/@nodes.0/@EOLElement/@body/@statements.0/@lhs" name="name">
+                <region>
+                  <start line="6" column="3"/>
+                  <end line="6" column="7"/>
+                </region>
+              </property>
+            </lhs>
+            <rhs xsi:type="eol:PlusOperatorExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.0">
+              <region>
+                <start line="6" column="10"/>
+                <end line="6" column="33"/>
+              </region>
+              <lhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.0/@rhs">
+                <region>
+                  <start line="6" column="10"/>
+                  <end line="6" column="16"/>
+                </region>
+                <target xsi:type="eol:NameExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.0/@rhs/@lhs" name="c">
+                  <region>
+                    <start line="6" column="10"/>
+                    <end line="6" column="11"/>
+                  </region>
+                </target>
+                <property container="/0/@nodes.0/@EOLElement/@body/@statements.0/@rhs/@lhs" name="name">
+                  <region>
+                    <start line="6" column="12"/>
+                    <end line="6" column="16"/>
+                  </region>
+                </property>
+              </lhs>
+              <rhs xsi:type="eol:StringExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.0/@rhs" value=" Application">
+                <region>
+                  <start line="6" column="19"/>
+                  <end line="6" column="33"/>
+                </region>
+                <resolvedType xsi:type="eol:StringType" container="/0/@nodes.0/@EOLElement/@body/@statements.0/@rhs/@rhs">
+                  <region>
+                    <start line="6" column="19"/>
+                    <end line="6" column="33"/>
+                  </region>
+                </resolvedType>
+              </rhs>
+            </rhs>
+          </statements>
+          <statements xsi:type="eol:AssignmentStatement" container="/0/@nodes.0/@EOLElement/@body">
+            <region>
+              <start line="7" column="1"/>
+              <end line="7" column="45"/>
+            </region>
+            <lhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.1">
+              <region>
+                <start line="7" column="1"/>
+                <end line="7" column="7"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.1/@lhs" name="v">
+                <region>
+                  <start line="7" column="1"/>
+                  <end line="7" column="2"/>
+                </region>
+              </target>
+              <property container="/0/@nodes.0/@EOLElement/@body/@statements.1/@lhs" name="name">
+                <region>
+                  <start line="7" column="3"/>
+                  <end line="7" column="7"/>
+                </region>
+              </property>
+            </lhs>
+            <rhs xsi:type="eol:PlusOperatorExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.1">
+              <region>
+                <start line="7" column="10"/>
+                <end line="7" column="44"/>
+              </region>
+              <lhs xsi:type="eol:PlusOperatorExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.1/@rhs">
+                <region>
+                  <start line="7" column="10"/>
+                  <end line="7" column="38"/>
+                </region>
+                <lhs xsi:type="eol:StringExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.1/@rhs/@lhs" value="Who will win the ">
+                  <region>
+                    <start line="7" column="10"/>
+                    <end line="7" column="29"/>
+                  </region>
+                  <resolvedType xsi:type="eol:StringType" container="/0/@nodes.0/@EOLElement/@body/@statements.1/@rhs/@lhs/@lhs">
+                    <region>
+                      <start line="7" column="10"/>
+                      <end line="7" column="29"/>
+                    </region>
+                  </resolvedType>
+                </lhs>
+                <rhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.1/@rhs/@lhs">
+                  <region>
+                    <start line="7" column="32"/>
+                    <end line="7" column="38"/>
+                  </region>
+                  <target xsi:type="eol:NameExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.1/@rhs/@lhs/@rhs" name="c">
+                    <region>
+                      <start line="7" column="32"/>
+                      <end line="7" column="33"/>
+                    </region>
+                  </target>
+                  <property container="/0/@nodes.0/@EOLElement/@body/@statements.1/@rhs/@lhs/@rhs" name="name">
+                    <region>
+                      <start line="7" column="34"/>
+                      <end line="7" column="38"/>
+                    </region>
+                  </property>
+                </rhs>
+              </lhs>
+              <rhs xsi:type="eol:StringExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.1/@rhs" value="?">
+                <region>
+                  <start line="7" column="41"/>
+                  <end line="7" column="44"/>
+                </region>
+                <resolvedType xsi:type="eol:StringType" container="/0/@nodes.0/@EOLElement/@body/@statements.1/@rhs/@rhs">
+                  <region>
+                    <start line="7" column="41"/>
+                    <end line="7" column="44"/>
+                  </region>
+                </resolvedType>
+              </rhs>
+            </rhs>
+          </statements>
+          <statements xsi:type="eol:ExpressionStatement" container="/0/@nodes.0/@EOLElement/@body">
+            <region>
+              <start line="8" column="1"/>
+              <end line="8" column="19"/>
+            </region>
+            <expression xsi:type="eol:MethodCallExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.2">
+              <region>
+                <start line="8" column="1"/>
+                <end line="8" column="19"/>
+              </region>
+              <target xsi:type="eol:PropertyCallExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.2/@expression">
+                <region>
+                  <start line="8" column="1"/>
+                  <end line="8" column="11"/>
+                </region>
+                <target xsi:type="eol:NameExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.2/@expression/@target" name="a">
+                  <region>
+                    <start line="8" column="1"/>
+                    <end line="8" column="2"/>
+                  </region>
+                </target>
+                <property container="/0/@nodes.0/@EOLElement/@body/@statements.2/@expression/@target" name="contents">
+                  <region>
+                    <start line="8" column="3"/>
+                    <end line="8" column="11"/>
+                  </region>
+                </property>
+              </target>
+              <arguments xsi:type="eol:NameExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.2/@expression" name="v">
+                <region>
+                  <start line="8" column="16"/>
+                  <end line="8" column="17"/>
+                </region>
+              </arguments>
+              <method container="/0/@nodes.0/@EOLElement/@body/@statements.2/@expression" name="add">
+                <region>
+                  <start line="8" column="12"/>
+                  <end line="8" column="18"/>
+                </region>
+              </method>
+            </expression>
+          </statements>
+          <statements xsi:type="eol:ForStatement" container="/0/@nodes.0/@EOLElement/@body">
+            <region>
+              <start line="10" column="1"/>
+              <end line="15" column="2"/>
+            </region>
+            <iterator container="/0/@nodes.0/@EOLElement/@body/@statements.3">
+              <region>
+                <start line="10" column="6"/>
+                <end line="10" column="7"/>
+              </region>
+              <resolvedType xsi:type="eol:AnyType" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@iterator">
+                <region>
+                  <start line="10" column="6"/>
+                  <end line="10" column="7"/>
+                </region>
+              </resolvedType>
+              <name container="/0/@nodes.0/@EOLElement/@body/@statements.3/@iterator" name="g">
+                <region>
+                  <start line="10" column="6"/>
+                  <end line="10" column="7"/>
+                </region>
+              </name>
+            </iterator>
+            <condition xsi:type="eol:PropertyCallExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.3">
+              <region>
+                <start line="10" column="11"/>
+                <end line="10" column="19"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@condition" name="c">
+                <region>
+                  <start line="10" column="11"/>
+                  <end line="10" column="12"/>
+                </region>
+              </target>
+              <property container="/0/@nodes.0/@EOLElement/@body/@statements.3/@condition" name="groups">
+                <region>
+                  <start line="10" column="13"/>
+                  <end line="10" column="19"/>
+                </region>
+              </property>
+            </condition>
+            <body container="/0/@nodes.0/@EOLElement/@body/@statements.3">
+              <region>
+                <start line="10" column="21"/>
+                <end line="15" column="2"/>
+              </region>
+              <block container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body">
+                <region>
+                  <start line="10" column="21"/>
+                  <end line="15" column="2"/>
+                </region>
+                <statements xsi:type="eol:ExpressionStatement" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block">
+                  <region>
+                    <start line="11" column="2"/>
+                    <end line="11" column="33"/>
+                  </region>
+                  <expression xsi:type="eol:MethodCallExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.0">
+                    <region>
+                      <start line="11" column="2"/>
+                      <end line="11" column="33"/>
+                    </region>
+                    <target xsi:type="eol:PropertyCallExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.0/@expression">
+                      <region>
+                        <start line="11" column="2"/>
+                        <end line="11" column="12"/>
+                      </region>
+                      <target xsi:type="eol:NameExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.0/@expression/@target" name="v">
+                        <region>
+                          <start line="11" column="2"/>
+                          <end line="11" column="3"/>
+                        </region>
+                      </target>
+                      <property container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.0/@expression/@target" name="contents">
+                        <region>
+                          <start line="11" column="4"/>
+                          <end line="11" column="12"/>
+                        </region>
+                      </property>
+                    </target>
+                    <arguments xsi:type="eol:MethodCallExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.0/@expression">
+                      <region>
+                        <start line="11" column="17"/>
+                        <end line="11" column="31"/>
+                      </region>
+                      <target xsi:type="eol:NameExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.0/@expression/@arguments.0" name="g">
+                        <region>
+                          <start line="11" column="17"/>
+                          <end line="11" column="18"/>
+                        </region>
+                      </target>
+                      <method container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.0/@expression/@arguments.0" name="equivalent">
+                        <region>
+                          <start line="11" column="19"/>
+                          <end line="11" column="31"/>
+                        </region>
+                      </method>
+                    </arguments>
+                    <method container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.0/@expression" name="add">
+                      <region>
+                        <start line="11" column="13"/>
+                        <end line="11" column="32"/>
+                      </region>
+                    </method>
+                  </expression>
+                </statements>
+                <statements xsi:type="eol:ForStatement" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block">
+                  <region>
+                    <start line="12" column="2"/>
+                    <end line="14" column="3"/>
+                  </region>
+                  <iterator container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1">
+                    <region>
+                      <start line="12" column="7"/>
+                      <end line="12" column="11"/>
+                    </region>
+                    <resolvedType xsi:type="eol:AnyType" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@iterator">
+                      <region>
+                        <start line="12" column="7"/>
+                        <end line="12" column="11"/>
+                      </region>
+                    </resolvedType>
+                    <name container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@iterator" name="comp">
+                      <region>
+                        <start line="12" column="7"/>
+                        <end line="12" column="11"/>
+                      </region>
+                    </name>
+                  </iterator>
+                  <condition xsi:type="eol:PropertyCallExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1">
+                    <region>
+                      <start line="12" column="15"/>
+                      <end line="12" column="28"/>
+                    </region>
+                    <target xsi:type="eol:NameExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@condition" name="g">
+                      <region>
+                        <start line="12" column="15"/>
+                        <end line="12" column="16"/>
+                      </region>
+                    </target>
+                    <property container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@condition" name="competitors">
+                      <region>
+                        <start line="12" column="17"/>
+                        <end line="12" column="28"/>
+                      </region>
+                    </property>
+                  </condition>
+                  <body container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1">
+                    <region>
+                      <start line="12" column="30"/>
+                      <end line="14" column="3"/>
+                    </region>
+                    <block container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body">
+                      <region>
+                        <start line="12" column="30"/>
+                        <end line="14" column="3"/>
+                      </region>
+                      <statements xsi:type="eol:ExpressionStatement" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block">
+                        <region>
+                          <start line="13" column="3"/>
+                          <end line="13" column="37"/>
+                        </region>
+                        <expression xsi:type="eol:MethodCallExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block/@statements.0">
+                          <region>
+                            <start line="13" column="3"/>
+                            <end line="13" column="37"/>
+                          </region>
+                          <target xsi:type="eol:PropertyCallExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block/@statements.0/@expression">
+                            <region>
+                              <start line="13" column="3"/>
+                              <end line="13" column="13"/>
+                            </region>
+                            <target xsi:type="eol:NameExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block/@statements.0/@expression/@target" name="v">
+                              <region>
+                                <start line="13" column="3"/>
+                                <end line="13" column="4"/>
+                              </region>
+                            </target>
+                            <property container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block/@statements.0/@expression/@target" name="contents">
+                              <region>
+                                <start line="13" column="5"/>
+                                <end line="13" column="13"/>
+                              </region>
+                            </property>
+                          </target>
+                          <arguments xsi:type="eol:MethodCallExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block/@statements.0/@expression">
+                            <region>
+                              <start line="13" column="18"/>
+                              <end line="13" column="35"/>
+                            </region>
+                            <target xsi:type="eol:NameExpression" container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block/@statements.0/@expression/@arguments.0" name="comp">
+                              <region>
+                                <start line="13" column="18"/>
+                                <end line="13" column="22"/>
+                              </region>
+                            </target>
+                            <method container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block/@statements.0/@expression/@arguments.0" name="equivalent">
+                              <region>
+                                <start line="13" column="23"/>
+                                <end line="13" column="35"/>
+                              </region>
+                            </method>
+                          </arguments>
+                          <method container="/0/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block/@statements.0/@expression" name="add">
+                            <region>
+                              <start line="13" column="14"/>
+                              <end line="13" column="36"/>
+                            </region>
+                          </method>
+                        </expression>
+                      </statements>
+                    </block>
+                  </body>
+                </statements>
+              </block>
+            </body>
+          </statements>
+        </body>
+      </EOLElement>
+    </nodes>
+    <nodes name="2" outgoing="/0/@nodes.2" incoming="/0/@nodes.0" visited="true">
+      <EOLElement xsi:type="eol:StringExpression" value="Create TraceabilityLink for Competition2Application"/>
+    </nodes>
+    <nodes name="3" outgoing="/0/@nodes.3 /0/@nodes.18" incoming="/0/@nodes.1 /0/@nodes.0 /0/@nodes.6" visited="true">
+      <EOLElement xsi:type="eol:StringExpression" value="Check TraceabilityLink for Competition2Application"/>
+    </nodes>
+    <nodes name="4" outgoing="/0/@nodes.4" incoming="/0/@nodes.2" visited="true">
+      <EOLElement xsi:type="eol:AssignmentStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.0/@body"/>
+        <region>
+          <start line="6" column="1"/>
+          <end line="6" column="34"/>
+        </region>
+        <lhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.3/@EOLElement">
+          <region>
+            <start line="6" column="1"/>
+            <end line="6" column="7"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/0/@nodes.3/@EOLElement/@lhs" name="a">
+            <region>
+              <start line="6" column="1"/>
+              <end line="6" column="2"/>
+            </region>
+          </target>
+          <property container="/0/@nodes.3/@EOLElement/@lhs" name="name">
+            <region>
+              <start line="6" column="3"/>
+              <end line="6" column="7"/>
+            </region>
+          </property>
+        </lhs>
+        <rhs xsi:type="eol:PlusOperatorExpression" container="/0/@nodes.3/@EOLElement">
+          <region>
+            <start line="6" column="10"/>
+            <end line="6" column="33"/>
+          </region>
+          <lhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.3/@EOLElement/@rhs">
+            <region>
+              <start line="6" column="10"/>
+              <end line="6" column="16"/>
+            </region>
+            <target xsi:type="eol:NameExpression" container="/0/@nodes.3/@EOLElement/@rhs/@lhs" name="c">
+              <region>
+                <start line="6" column="10"/>
+                <end line="6" column="11"/>
+              </region>
+            </target>
+            <property container="/0/@nodes.3/@EOLElement/@rhs/@lhs" name="name">
+              <region>
+                <start line="6" column="12"/>
+                <end line="6" column="16"/>
+              </region>
+            </property>
+          </lhs>
+          <rhs xsi:type="eol:StringExpression" container="/0/@nodes.3/@EOLElement/@rhs" value=" Application">
+            <region>
+              <start line="6" column="19"/>
+              <end line="6" column="33"/>
+            </region>
+            <resolvedType xsi:type="eol:StringType" container="/0/@nodes.3/@EOLElement/@rhs/@rhs">
+              <region>
+                <start line="6" column="19"/>
+                <end line="6" column="33"/>
+              </region>
+            </resolvedType>
+          </rhs>
+        </rhs>
+      </EOLElement>
+    </nodes>
+    <nodes name="5" outgoing="/0/@nodes.5" incoming="/0/@nodes.3" visited="true">
+      <EOLElement xsi:type="eol:AssignmentStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.0/@body"/>
+        <region>
+          <start line="7" column="1"/>
+          <end line="7" column="45"/>
+        </region>
+        <lhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.4/@EOLElement">
+          <region>
+            <start line="7" column="1"/>
+            <end line="7" column="7"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/0/@nodes.4/@EOLElement/@lhs" name="v">
+            <region>
+              <start line="7" column="1"/>
+              <end line="7" column="2"/>
+            </region>
+          </target>
+          <property container="/0/@nodes.4/@EOLElement/@lhs" name="name">
+            <region>
+              <start line="7" column="3"/>
+              <end line="7" column="7"/>
+            </region>
+          </property>
+        </lhs>
+        <rhs xsi:type="eol:PlusOperatorExpression" container="/0/@nodes.4/@EOLElement">
+          <region>
+            <start line="7" column="10"/>
+            <end line="7" column="44"/>
+          </region>
+          <lhs xsi:type="eol:PlusOperatorExpression" container="/0/@nodes.4/@EOLElement/@rhs">
+            <region>
+              <start line="7" column="10"/>
+              <end line="7" column="38"/>
+            </region>
+            <lhs xsi:type="eol:StringExpression" container="/0/@nodes.4/@EOLElement/@rhs/@lhs" value="Who will win the ">
+              <region>
+                <start line="7" column="10"/>
+                <end line="7" column="29"/>
+              </region>
+              <resolvedType xsi:type="eol:StringType" container="/0/@nodes.4/@EOLElement/@rhs/@lhs/@lhs">
+                <region>
+                  <start line="7" column="10"/>
+                  <end line="7" column="29"/>
+                </region>
+              </resolvedType>
+            </lhs>
+            <rhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.4/@EOLElement/@rhs/@lhs">
+              <region>
+                <start line="7" column="32"/>
+                <end line="7" column="38"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/0/@nodes.4/@EOLElement/@rhs/@lhs/@rhs" name="c">
+                <region>
+                  <start line="7" column="32"/>
+                  <end line="7" column="33"/>
+                </region>
+              </target>
+              <property container="/0/@nodes.4/@EOLElement/@rhs/@lhs/@rhs" name="name">
+                <region>
+                  <start line="7" column="34"/>
+                  <end line="7" column="38"/>
+                </region>
+              </property>
+            </rhs>
+          </lhs>
+          <rhs xsi:type="eol:StringExpression" container="/0/@nodes.4/@EOLElement/@rhs" value="?">
+            <region>
+              <start line="7" column="41"/>
+              <end line="7" column="44"/>
+            </region>
+            <resolvedType xsi:type="eol:StringType" container="/0/@nodes.4/@EOLElement/@rhs/@rhs">
+              <region>
+                <start line="7" column="41"/>
+                <end line="7" column="44"/>
+              </region>
+            </resolvedType>
+          </rhs>
+        </rhs>
+      </EOLElement>
+    </nodes>
+    <nodes name="6" outgoing="/0/@nodes.6" incoming="/0/@nodes.4" visited="true">
+      <EOLElement xsi:type="eol:ExpressionStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.0/@body"/>
+        <region>
+          <start line="8" column="1"/>
+          <end line="8" column="19"/>
+        </region>
+        <expression xsi:type="eol:MethodCallExpression" container="/0/@nodes.5/@EOLElement">
+          <region>
+            <start line="8" column="1"/>
+            <end line="8" column="19"/>
+          </region>
+          <target xsi:type="eol:PropertyCallExpression" container="/0/@nodes.5/@EOLElement/@expression">
+            <region>
+              <start line="8" column="1"/>
+              <end line="8" column="11"/>
+            </region>
+            <target xsi:type="eol:NameExpression" container="/0/@nodes.5/@EOLElement/@expression/@target" name="a">
+              <region>
+                <start line="8" column="1"/>
+                <end line="8" column="2"/>
+              </region>
+            </target>
+            <property container="/0/@nodes.5/@EOLElement/@expression/@target" name="contents">
+              <region>
+                <start line="8" column="3"/>
+                <end line="8" column="11"/>
+              </region>
+            </property>
+          </target>
+          <arguments xsi:type="eol:NameExpression" container="/0/@nodes.5/@EOLElement/@expression" name="v">
+            <region>
+              <start line="8" column="16"/>
+              <end line="8" column="17"/>
+            </region>
+          </arguments>
+          <method container="/0/@nodes.5/@EOLElement/@expression" name="add">
+            <region>
+              <start line="8" column="12"/>
+              <end line="8" column="18"/>
+            </region>
+          </method>
+        </expression>
+      </EOLElement>
+    </nodes>
+    <nodes name="7" outgoing="/0/@nodes.7 /0/@nodes.2" incoming="/0/@nodes.5 /0/@nodes.12" visited="true">
+      <EOLElement xsi:type="eol:ForStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.0/@body"/>
+        <region>
+          <start line="10" column="1"/>
+          <end line="15" column="2"/>
+        </region>
+        <iterator container="/0/@nodes.6/@EOLElement">
+          <region>
+            <start line="10" column="6"/>
+            <end line="10" column="7"/>
+          </region>
+          <resolvedType xsi:type="eol:AnyType" container="/0/@nodes.6/@EOLElement/@iterator">
+            <region>
+              <start line="10" column="6"/>
+              <end line="10" column="7"/>
+            </region>
+          </resolvedType>
+          <name container="/0/@nodes.6/@EOLElement/@iterator" name="g">
+            <region>
+              <start line="10" column="6"/>
+              <end line="10" column="7"/>
+            </region>
+          </name>
+        </iterator>
+        <condition xsi:type="eol:PropertyCallExpression" container="/0/@nodes.6/@EOLElement">
+          <region>
+            <start line="10" column="11"/>
+            <end line="10" column="19"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/0/@nodes.6/@EOLElement/@condition" name="c">
+            <region>
+              <start line="10" column="11"/>
+              <end line="10" column="12"/>
+            </region>
+          </target>
+          <property container="/0/@nodes.6/@EOLElement/@condition" name="groups">
+            <region>
+              <start line="10" column="13"/>
+              <end line="10" column="19"/>
+            </region>
+          </property>
+        </condition>
+        <body container="/0/@nodes.6/@EOLElement">
+          <region>
+            <start line="10" column="21"/>
+            <end line="15" column="2"/>
+          </region>
+          <block container="/0/@nodes.6/@EOLElement/@body">
+            <region>
+              <start line="10" column="21"/>
+              <end line="15" column="2"/>
+            </region>
+            <statements xsi:type="eol:ExpressionStatement" container="/0/@nodes.6/@EOLElement/@body/@block">
+              <region>
+                <start line="11" column="2"/>
+                <end line="11" column="33"/>
+              </region>
+              <expression xsi:type="eol:MethodCallExpression" container="/0/@nodes.6/@EOLElement/@body/@block/@statements.0">
+                <region>
+                  <start line="11" column="2"/>
+                  <end line="11" column="33"/>
+                </region>
+                <target xsi:type="eol:PropertyCallExpression" container="/0/@nodes.6/@EOLElement/@body/@block/@statements.0/@expression">
+                  <region>
+                    <start line="11" column="2"/>
+                    <end line="11" column="12"/>
+                  </region>
+                  <target xsi:type="eol:NameExpression" container="/0/@nodes.6/@EOLElement/@body/@block/@statements.0/@expression/@target" name="v">
+                    <region>
+                      <start line="11" column="2"/>
+                      <end line="11" column="3"/>
+                    </region>
+                  </target>
+                  <property container="/0/@nodes.6/@EOLElement/@body/@block/@statements.0/@expression/@target" name="contents">
+                    <region>
+                      <start line="11" column="4"/>
+                      <end line="11" column="12"/>
+                    </region>
+                  </property>
+                </target>
+                <arguments xsi:type="eol:MethodCallExpression" container="/0/@nodes.6/@EOLElement/@body/@block/@statements.0/@expression">
+                  <region>
+                    <start line="11" column="17"/>
+                    <end line="11" column="31"/>
+                  </region>
+                  <target xsi:type="eol:NameExpression" container="/0/@nodes.6/@EOLElement/@body/@block/@statements.0/@expression/@arguments.0" name="g">
+                    <region>
+                      <start line="11" column="17"/>
+                      <end line="11" column="18"/>
+                    </region>
+                  </target>
+                  <method container="/0/@nodes.6/@EOLElement/@body/@block/@statements.0/@expression/@arguments.0" name="equivalent">
+                    <region>
+                      <start line="11" column="19"/>
+                      <end line="11" column="31"/>
+                    </region>
+                  </method>
+                </arguments>
+                <method container="/0/@nodes.6/@EOLElement/@body/@block/@statements.0/@expression" name="add">
+                  <region>
+                    <start line="11" column="13"/>
+                    <end line="11" column="32"/>
+                  </region>
+                </method>
+              </expression>
+            </statements>
+            <statements xsi:type="eol:ForStatement" container="/0/@nodes.6/@EOLElement/@body/@block">
+              <region>
+                <start line="12" column="2"/>
+                <end line="14" column="3"/>
+              </region>
+              <iterator container="/0/@nodes.6/@EOLElement/@body/@block/@statements.1">
+                <region>
+                  <start line="12" column="7"/>
+                  <end line="12" column="11"/>
+                </region>
+                <resolvedType xsi:type="eol:AnyType" container="/0/@nodes.6/@EOLElement/@body/@block/@statements.1/@iterator">
+                  <region>
+                    <start line="12" column="7"/>
+                    <end line="12" column="11"/>
+                  </region>
+                </resolvedType>
+                <name container="/0/@nodes.6/@EOLElement/@body/@block/@statements.1/@iterator" name="comp">
+                  <region>
+                    <start line="12" column="7"/>
+                    <end line="12" column="11"/>
+                  </region>
+                </name>
+              </iterator>
+              <condition xsi:type="eol:PropertyCallExpression" container="/0/@nodes.6/@EOLElement/@body/@block/@statements.1">
+                <region>
+                  <start line="12" column="15"/>
+                  <end line="12" column="28"/>
+                </region>
+                <target xsi:type="eol:NameExpression" container="/0/@nodes.6/@EOLElement/@body/@block/@statements.1/@condition" name="g">
+                  <region>
+                    <start line="12" column="15"/>
+                    <end line="12" column="16"/>
+                  </region>
+                </target>
+                <property container="/0/@nodes.6/@EOLElement/@body/@block/@statements.1/@condition" name="competitors">
+                  <region>
+                    <start line="12" column="17"/>
+                    <end line="12" column="28"/>
+                  </region>
+                </property>
+              </condition>
+              <body container="/0/@nodes.6/@EOLElement/@body/@block/@statements.1">
+                <region>
+                  <start line="12" column="30"/>
+                  <end line="14" column="3"/>
+                </region>
+                <block container="/0/@nodes.6/@EOLElement/@body/@block/@statements.1/@body">
+                  <region>
+                    <start line="12" column="30"/>
+                    <end line="14" column="3"/>
+                  </region>
+                  <statements xsi:type="eol:ExpressionStatement" container="/0/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block">
+                    <region>
+                      <start line="13" column="3"/>
+                      <end line="13" column="37"/>
+                    </region>
+                    <expression xsi:type="eol:MethodCallExpression" container="/0/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block/@statements.0">
+                      <region>
+                        <start line="13" column="3"/>
+                        <end line="13" column="37"/>
+                      </region>
+                      <target xsi:type="eol:PropertyCallExpression" container="/0/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block/@statements.0/@expression">
+                        <region>
+                          <start line="13" column="3"/>
+                          <end line="13" column="13"/>
+                        </region>
+                        <target xsi:type="eol:NameExpression" container="/0/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block/@statements.0/@expression/@target" name="v">
+                          <region>
+                            <start line="13" column="3"/>
+                            <end line="13" column="4"/>
+                          </region>
+                        </target>
+                        <property container="/0/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block/@statements.0/@expression/@target" name="contents">
+                          <region>
+                            <start line="13" column="5"/>
+                            <end line="13" column="13"/>
+                          </region>
+                        </property>
+                      </target>
+                      <arguments xsi:type="eol:MethodCallExpression" container="/0/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block/@statements.0/@expression">
+                        <region>
+                          <start line="13" column="18"/>
+                          <end line="13" column="35"/>
+                        </region>
+                        <target xsi:type="eol:NameExpression" container="/0/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block/@statements.0/@expression/@arguments.0" name="comp">
+                          <region>
+                            <start line="13" column="18"/>
+                            <end line="13" column="22"/>
+                          </region>
+                        </target>
+                        <method container="/0/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block/@statements.0/@expression/@arguments.0" name="equivalent">
+                          <region>
+                            <start line="13" column="23"/>
+                            <end line="13" column="35"/>
+                          </region>
+                        </method>
+                      </arguments>
+                      <method container="/0/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block/@statements.0/@expression" name="add">
+                        <region>
+                          <start line="13" column="14"/>
+                          <end line="13" column="36"/>
+                        </region>
+                      </method>
+                    </expression>
+                  </statements>
+                </block>
+              </body>
+            </statements>
+          </block>
+        </body>
+      </EOLElement>
+    </nodes>
+    <nodes name="8" outgoing="/0/@nodes.8 /0/@nodes.12" incoming="/0/@nodes.6 /0/@nodes.10" visited="true">
+      <EOLElement xsi:type="eol:ExpressionStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.0/@body/@statements.3/@body/@block"/>
+        <region>
+          <start line="11" column="2"/>
+          <end line="11" column="33"/>
+        </region>
+        <expression xsi:type="eol:MethodCallExpression" container="/0/@nodes.7/@EOLElement">
+          <region>
+            <start line="11" column="2"/>
+            <end line="11" column="33"/>
+          </region>
+          <target xsi:type="eol:PropertyCallExpression" container="/0/@nodes.7/@EOLElement/@expression">
+            <region>
+              <start line="11" column="2"/>
+              <end line="11" column="12"/>
+            </region>
+            <target xsi:type="eol:NameExpression" container="/0/@nodes.7/@EOLElement/@expression/@target" name="v">
+              <region>
+                <start line="11" column="2"/>
+                <end line="11" column="3"/>
+              </region>
+            </target>
+            <property container="/0/@nodes.7/@EOLElement/@expression/@target" name="contents">
+              <region>
+                <start line="11" column="4"/>
+                <end line="11" column="12"/>
+              </region>
+            </property>
+          </target>
+          <arguments xsi:type="eol:MethodCallExpression" container="/0/@nodes.7/@EOLElement/@expression">
+            <region>
+              <start line="11" column="17"/>
+              <end line="11" column="31"/>
+            </region>
+            <target xsi:type="eol:NameExpression" container="/0/@nodes.7/@EOLElement/@expression/@arguments.0" name="g">
+              <region>
+                <start line="11" column="17"/>
+                <end line="11" column="18"/>
+              </region>
+            </target>
+            <method container="/0/@nodes.7/@EOLElement/@expression/@arguments.0" name="equivalent">
+              <region>
+                <start line="11" column="19"/>
+                <end line="11" column="31"/>
+              </region>
+            </method>
+          </arguments>
+          <method container="/0/@nodes.7/@EOLElement/@expression" name="add">
+            <region>
+              <start line="11" column="13"/>
+              <end line="11" column="32"/>
+            </region>
+          </method>
+        </expression>
+      </EOLElement>
+    </nodes>
+    <nodes name="9" outgoing="/0/@nodes.9 /0/@nodes.10" incoming="/0/@nodes.7" visited="true">
+      <EOLElement xsi:type="etl:TransformationRule">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#/"/>
+        <region>
+          <start line="27"/>
+          <end line="32" column="1"/>
+        </region>
+        <name container="/0/@nodes.8/@EOLElement" name="Group2Label">
+          <region>
+            <start line="27" column="5"/>
+            <end line="27" column="16"/>
+          </region>
+        </name>
+        <source container="/0/@nodes.8/@EOLElement">
+          <region>
+            <start line="28" column="11"/>
+            <end line="28" column="32"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/0/@nodes.8/@EOLElement/@source" modelName="Competition" elementName="Group">
+            <region>
+              <start line="28" column="15"/>
+              <end line="28" column="32"/>
+            </region>
+          </resolvedType>
+          <name container="/0/@nodes.8/@EOLElement/@source" name="g">
+            <region>
+              <start line="28" column="11"/>
+              <end line="28" column="12"/>
+            </region>
+          </name>
+        </source>
+        <targets container="/0/@nodes.8/@EOLElement">
+          <region>
+            <start line="29" column="4"/>
+            <end line="29" column="19"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/0/@nodes.8/@EOLElement/@targets.0" modelName="TVApp" elementName="Label">
+            <region>
+              <start line="29" column="8"/>
+              <end line="29" column="19"/>
+            </region>
+          </resolvedType>
+          <name container="/0/@nodes.8/@EOLElement/@targets.0" name="l">
+            <region>
+              <start line="29" column="4"/>
+              <end line="29" column="5"/>
+            </region>
+          </name>
+        </targets>
+        <body container="/0/@nodes.8/@EOLElement">
+          <region>
+            <start line="31" column="1"/>
+            <end line="31" column="28"/>
+          </region>
+          <statements xsi:type="eol:AssignmentStatement" container="/0/@nodes.8/@EOLElement/@body">
+            <region>
+              <start line="31" column="1"/>
+              <end line="31" column="28"/>
+            </region>
+            <lhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.8/@EOLElement/@body/@statements.0">
+              <region>
+                <start line="31" column="1"/>
+                <end line="31" column="7"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/0/@nodes.8/@EOLElement/@body/@statements.0/@lhs" name="l">
+                <region>
+                  <start line="31" column="1"/>
+                  <end line="31" column="2"/>
+                </region>
+              </target>
+              <property container="/0/@nodes.8/@EOLElement/@body/@statements.0/@lhs" name="name">
+                <region>
+                  <start line="31" column="3"/>
+                  <end line="31" column="7"/>
+                </region>
+              </property>
+            </lhs>
+            <rhs xsi:type="eol:PlusOperatorExpression" container="/0/@nodes.8/@EOLElement/@body/@statements.0">
+              <region>
+                <start line="31" column="10"/>
+                <end line="31" column="27"/>
+              </region>
+              <lhs xsi:type="eol:StringExpression" container="/0/@nodes.8/@EOLElement/@body/@statements.0/@rhs" value="Group ">
+                <region>
+                  <start line="31" column="10"/>
+                  <end line="31" column="18"/>
+                </region>
+                <resolvedType xsi:type="eol:StringType" container="/0/@nodes.8/@EOLElement/@body/@statements.0/@rhs/@lhs">
+                  <region>
+                    <start line="31" column="10"/>
+                    <end line="31" column="18"/>
+                  </region>
+                </resolvedType>
+              </lhs>
+              <rhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.8/@EOLElement/@body/@statements.0/@rhs">
+                <region>
+                  <start line="31" column="21"/>
+                  <end line="31" column="27"/>
+                </region>
+                <target xsi:type="eol:NameExpression" container="/0/@nodes.8/@EOLElement/@body/@statements.0/@rhs/@rhs" name="g">
+                  <region>
+                    <start line="31" column="21"/>
+                    <end line="31" column="22"/>
+                  </region>
+                </target>
+                <property container="/0/@nodes.8/@EOLElement/@body/@statements.0/@rhs/@rhs" name="name">
+                  <region>
+                    <start line="31" column="23"/>
+                    <end line="31" column="27"/>
+                  </region>
+                </property>
+              </rhs>
+            </rhs>
+          </statements>
+        </body>
+        <annotationBlock container="/0/@nodes.8/@EOLElement">
+          <region>
+            <start line="26"/>
+            <end line="26" column="5"/>
+          </region>
+          <statements xsi:type="eol:SimpleAnnotationStatement" container="/0/@nodes.8/@EOLElement/@annotationBlock">
+            <region>
+              <start line="26"/>
+              <end line="26" column="5"/>
+            </region>
+            <name container="/0/@nodes.8/@EOLElement/@annotationBlock/@statements.0" name="lazy">
+              <region>
+                <start line="26"/>
+                <end line="26" column="5"/>
+              </region>
+            </name>
+          </statements>
+        </annotationBlock>
+      </EOLElement>
+    </nodes>
+    <nodes name="10" outgoing="/0/@nodes.10" incoming="/0/@nodes.8" visited="true">
+      <EOLElement xsi:type="eol:StringExpression" value="Create TraceabilityLink for Group2Label"/>
+    </nodes>
+    <nodes name="11" outgoing="/0/@nodes.11 /0/@nodes.7" incoming="/0/@nodes.9 /0/@nodes.8 /0/@nodes.11" visited="true">
+      <EOLElement xsi:type="eol:StringExpression" value="Check TraceabilityLink for Group2Label"/>
+    </nodes>
+    <nodes name="12" outgoing="/0/@nodes.10" incoming="/0/@nodes.10" visited="true">
+      <EOLElement xsi:type="eol:AssignmentStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.2/@body"/>
+        <region>
+          <start line="31" column="1"/>
+          <end line="31" column="28"/>
+        </region>
+        <lhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.11/@EOLElement">
+          <region>
+            <start line="31" column="1"/>
+            <end line="31" column="7"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/0/@nodes.11/@EOLElement/@lhs" name="l">
+            <region>
+              <start line="31" column="1"/>
+              <end line="31" column="2"/>
+            </region>
+          </target>
+          <property container="/0/@nodes.11/@EOLElement/@lhs" name="name">
+            <region>
+              <start line="31" column="3"/>
+              <end line="31" column="7"/>
+            </region>
+          </property>
+        </lhs>
+        <rhs xsi:type="eol:PlusOperatorExpression" container="/0/@nodes.11/@EOLElement">
+          <region>
+            <start line="31" column="10"/>
+            <end line="31" column="27"/>
+          </region>
+          <lhs xsi:type="eol:StringExpression" container="/0/@nodes.11/@EOLElement/@rhs" value="Group ">
+            <region>
+              <start line="31" column="10"/>
+              <end line="31" column="18"/>
+            </region>
+            <resolvedType xsi:type="eol:StringType" container="/0/@nodes.11/@EOLElement/@rhs/@lhs">
+              <region>
+                <start line="31" column="10"/>
+                <end line="31" column="18"/>
+              </region>
+            </resolvedType>
+          </lhs>
+          <rhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.11/@EOLElement/@rhs">
+            <region>
+              <start line="31" column="21"/>
+              <end line="31" column="27"/>
+            </region>
+            <target xsi:type="eol:NameExpression" container="/0/@nodes.11/@EOLElement/@rhs/@rhs" name="g">
+              <region>
+                <start line="31" column="21"/>
+                <end line="31" column="22"/>
+              </region>
+            </target>
+            <property container="/0/@nodes.11/@EOLElement/@rhs/@rhs" name="name">
+              <region>
+                <start line="31" column="23"/>
+                <end line="31" column="27"/>
+              </region>
+            </property>
+          </rhs>
+        </rhs>
+      </EOLElement>
+    </nodes>
+    <nodes name="13" outgoing="/0/@nodes.13 /0/@nodes.6" incoming="/0/@nodes.7 /0/@nodes.13" visited="true">
+      <EOLElement xsi:type="eol:ForStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.0/@body/@statements.3/@body/@block"/>
+        <region>
+          <start line="12" column="2"/>
+          <end line="14" column="3"/>
+        </region>
+        <iterator container="/0/@nodes.12/@EOLElement">
+          <region>
+            <start line="12" column="7"/>
+            <end line="12" column="11"/>
+          </region>
+          <resolvedType xsi:type="eol:AnyType" container="/0/@nodes.12/@EOLElement/@iterator">
+            <region>
+              <start line="12" column="7"/>
+              <end line="12" column="11"/>
+            </region>
+          </resolvedType>
+          <name container="/0/@nodes.12/@EOLElement/@iterator" name="comp">
+            <region>
+              <start line="12" column="7"/>
+              <end line="12" column="11"/>
+            </region>
+          </name>
+        </iterator>
+        <condition xsi:type="eol:PropertyCallExpression" container="/0/@nodes.12/@EOLElement">
+          <region>
+            <start line="12" column="15"/>
+            <end line="12" column="28"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/0/@nodes.12/@EOLElement/@condition" name="g">
+            <region>
+              <start line="12" column="15"/>
+              <end line="12" column="16"/>
+            </region>
+          </target>
+          <property container="/0/@nodes.12/@EOLElement/@condition" name="competitors">
+            <region>
+              <start line="12" column="17"/>
+              <end line="12" column="28"/>
+            </region>
+          </property>
+        </condition>
+        <body container="/0/@nodes.12/@EOLElement">
+          <region>
+            <start line="12" column="30"/>
+            <end line="14" column="3"/>
+          </region>
+          <block container="/0/@nodes.12/@EOLElement/@body">
+            <region>
+              <start line="12" column="30"/>
+              <end line="14" column="3"/>
+            </region>
+            <statements xsi:type="eol:ExpressionStatement" container="/0/@nodes.12/@EOLElement/@body/@block">
+              <region>
+                <start line="13" column="3"/>
+                <end line="13" column="37"/>
+              </region>
+              <expression xsi:type="eol:MethodCallExpression" container="/0/@nodes.12/@EOLElement/@body/@block/@statements.0">
+                <region>
+                  <start line="13" column="3"/>
+                  <end line="13" column="37"/>
+                </region>
+                <target xsi:type="eol:PropertyCallExpression" container="/0/@nodes.12/@EOLElement/@body/@block/@statements.0/@expression">
+                  <region>
+                    <start line="13" column="3"/>
+                    <end line="13" column="13"/>
+                  </region>
+                  <target xsi:type="eol:NameExpression" container="/0/@nodes.12/@EOLElement/@body/@block/@statements.0/@expression/@target" name="v">
+                    <region>
+                      <start line="13" column="3"/>
+                      <end line="13" column="4"/>
+                    </region>
+                  </target>
+                  <property container="/0/@nodes.12/@EOLElement/@body/@block/@statements.0/@expression/@target" name="contents">
+                    <region>
+                      <start line="13" column="5"/>
+                      <end line="13" column="13"/>
+                    </region>
+                  </property>
+                </target>
+                <arguments xsi:type="eol:MethodCallExpression" container="/0/@nodes.12/@EOLElement/@body/@block/@statements.0/@expression">
+                  <region>
+                    <start line="13" column="18"/>
+                    <end line="13" column="35"/>
+                  </region>
+                  <target xsi:type="eol:NameExpression" container="/0/@nodes.12/@EOLElement/@body/@block/@statements.0/@expression/@arguments.0" name="comp">
+                    <region>
+                      <start line="13" column="18"/>
+                      <end line="13" column="22"/>
+                    </region>
+                  </target>
+                  <method container="/0/@nodes.12/@EOLElement/@body/@block/@statements.0/@expression/@arguments.0" name="equivalent">
+                    <region>
+                      <start line="13" column="23"/>
+                      <end line="13" column="35"/>
+                    </region>
+                  </method>
+                </arguments>
+                <method container="/0/@nodes.12/@EOLElement/@body/@block/@statements.0/@expression" name="add">
+                  <region>
+                    <start line="13" column="14"/>
+                    <end line="13" column="36"/>
+                  </region>
+                </method>
+              </expression>
+            </statements>
+          </block>
+        </body>
+      </EOLElement>
+    </nodes>
+    <nodes name="14" outgoing="/0/@nodes.14 /0/@nodes.12" incoming="/0/@nodes.12 /0/@nodes.16" visited="true">
+      <EOLElement xsi:type="eol:ExpressionStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.0/@body/@statements.3/@body/@block/@statements.1/@body/@block"/>
+        <region>
+          <start line="13" column="3"/>
+          <end line="13" column="37"/>
+        </region>
+        <expression xsi:type="eol:MethodCallExpression" container="/0/@nodes.13/@EOLElement">
+          <region>
+            <start line="13" column="3"/>
+            <end line="13" column="37"/>
+          </region>
+          <target xsi:type="eol:PropertyCallExpression" container="/0/@nodes.13/@EOLElement/@expression">
+            <region>
+              <start line="13" column="3"/>
+              <end line="13" column="13"/>
+            </region>
+            <target xsi:type="eol:NameExpression" container="/0/@nodes.13/@EOLElement/@expression/@target" name="v">
+              <region>
+                <start line="13" column="3"/>
+                <end line="13" column="4"/>
+              </region>
+            </target>
+            <property container="/0/@nodes.13/@EOLElement/@expression/@target" name="contents">
+              <region>
+                <start line="13" column="5"/>
+                <end line="13" column="13"/>
+              </region>
+            </property>
+          </target>
+          <arguments xsi:type="eol:MethodCallExpression" container="/0/@nodes.13/@EOLElement/@expression">
+            <region>
+              <start line="13" column="18"/>
+              <end line="13" column="35"/>
+            </region>
+            <target xsi:type="eol:NameExpression" container="/0/@nodes.13/@EOLElement/@expression/@arguments.0" name="comp">
+              <region>
+                <start line="13" column="18"/>
+                <end line="13" column="22"/>
+              </region>
+            </target>
+            <method container="/0/@nodes.13/@EOLElement/@expression/@arguments.0" name="equivalent">
+              <region>
+                <start line="13" column="23"/>
+                <end line="13" column="35"/>
+              </region>
+            </method>
+          </arguments>
+          <method container="/0/@nodes.13/@EOLElement/@expression" name="add">
+            <region>
+              <start line="13" column="14"/>
+              <end line="13" column="36"/>
+            </region>
+          </method>
+        </expression>
+      </EOLElement>
+    </nodes>
+    <nodes name="15" outgoing="/0/@nodes.15 /0/@nodes.16" incoming="/0/@nodes.13" visited="true">
+      <EOLElement xsi:type="etl:TransformationRule">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#/"/>
+        <region>
+          <start line="18"/>
+          <end line="24" column="1"/>
+        </region>
+        <name container="/0/@nodes.14/@EOLElement" name="Competitor2Choice">
+          <region>
+            <start line="18" column="5"/>
+            <end line="18" column="22"/>
+          </region>
+        </name>
+        <source container="/0/@nodes.14/@EOLElement">
+          <region>
+            <start line="19" column="11"/>
+            <end line="19" column="38"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/0/@nodes.14/@EOLElement/@source" modelName="Competition" elementName="Competitor">
+            <region>
+              <start line="19" column="16"/>
+              <end line="19" column="38"/>
+            </region>
+          </resolvedType>
+          <name container="/0/@nodes.14/@EOLElement/@source" name="co">
+            <region>
+              <start line="19" column="11"/>
+              <end line="19" column="13"/>
+            </region>
+          </name>
+        </source>
+        <targets container="/0/@nodes.14/@EOLElement">
+          <region>
+            <start line="20" column="4"/>
+            <end line="20" column="21"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/0/@nodes.14/@EOLElement/@targets.0" modelName="TVApp" elementName="Choice">
+            <region>
+              <start line="20" column="9"/>
+              <end line="20" column="21"/>
+            </region>
+          </resolvedType>
+          <name container="/0/@nodes.14/@EOLElement/@targets.0" name="ch">
+            <region>
+              <start line="20" column="4"/>
+              <end line="20" column="6"/>
+            </region>
+          </name>
+        </targets>
+        <body container="/0/@nodes.14/@EOLElement">
+          <region>
+            <start line="22" column="1"/>
+            <end line="22" column="19"/>
+          </region>
+          <statements xsi:type="eol:AssignmentStatement" container="/0/@nodes.14/@EOLElement/@body">
+            <region>
+              <start line="22" column="1"/>
+              <end line="22" column="19"/>
+            </region>
+            <lhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.14/@EOLElement/@body/@statements.0">
+              <region>
+                <start line="22" column="1"/>
+                <end line="22" column="8"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/0/@nodes.14/@EOLElement/@body/@statements.0/@lhs" name="ch">
+                <region>
+                  <start line="22" column="1"/>
+                  <end line="22" column="3"/>
+                </region>
+              </target>
+              <property container="/0/@nodes.14/@EOLElement/@body/@statements.0/@lhs" name="name">
+                <region>
+                  <start line="22" column="4"/>
+                  <end line="22" column="8"/>
+                </region>
+              </property>
+            </lhs>
+            <rhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.14/@EOLElement/@body/@statements.0">
+              <region>
+                <start line="22" column="11"/>
+                <end line="22" column="18"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/0/@nodes.14/@EOLElement/@body/@statements.0/@rhs" name="co">
+                <region>
+                  <start line="22" column="11"/>
+                  <end line="22" column="13"/>
+                </region>
+              </target>
+              <property container="/0/@nodes.14/@EOLElement/@body/@statements.0/@rhs" name="name">
+                <region>
+                  <start line="22" column="14"/>
+                  <end line="22" column="18"/>
+                </region>
+              </property>
+            </rhs>
+          </statements>
+        </body>
+      </EOLElement>
+    </nodes>
+    <nodes name="16" outgoing="/0/@nodes.16" incoming="/0/@nodes.14" visited="true">
+      <EOLElement xsi:type="eol:StringExpression" value="Create TraceabilityLink for Competitor2Choice"/>
+    </nodes>
+    <nodes name="17" outgoing="/0/@nodes.17 /0/@nodes.13" incoming="/0/@nodes.15 /0/@nodes.14 /0/@nodes.17" visited="true">
+      <EOLElement xsi:type="eol:StringExpression" value="Check TraceabilityLink for Competitor2Choice"/>
+    </nodes>
+    <nodes name="18" outgoing="/0/@nodes.16" incoming="/0/@nodes.16" visited="true">
+      <EOLElement xsi:type="eol:AssignmentStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.1/@body"/>
+        <region>
+          <start line="22" column="1"/>
+          <end line="22" column="19"/>
+        </region>
+        <lhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.17/@EOLElement">
+          <region>
+            <start line="22" column="1"/>
+            <end line="22" column="8"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/0/@nodes.17/@EOLElement/@lhs" name="ch">
+            <region>
+              <start line="22" column="1"/>
+              <end line="22" column="3"/>
+            </region>
+          </target>
+          <property container="/0/@nodes.17/@EOLElement/@lhs" name="name">
+            <region>
+              <start line="22" column="4"/>
+              <end line="22" column="8"/>
+            </region>
+          </property>
+        </lhs>
+        <rhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.17/@EOLElement">
+          <region>
+            <start line="22" column="11"/>
+            <end line="22" column="18"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/0/@nodes.17/@EOLElement/@rhs" name="co">
+            <region>
+              <start line="22" column="11"/>
+              <end line="22" column="13"/>
+            </region>
+          </target>
+          <property container="/0/@nodes.17/@EOLElement/@rhs" name="name">
+            <region>
+              <start line="22" column="14"/>
+              <end line="22" column="18"/>
+            </region>
+          </property>
+        </rhs>
+      </EOLElement>
+    </nodes>
+    <nodes name="19" outgoing="/0/@nodes.19 /0/@nodes.20" incoming="/0/@nodes.2">
+      <EOLElement xsi:type="etl:TransformationRule">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#/"/>
+        <region>
+          <start line="18"/>
+          <end line="24" column="1"/>
+        </region>
+        <name container="/0/@nodes.18/@EOLElement" name="Competitor2Choice">
+          <region>
+            <start line="18" column="5"/>
+            <end line="18" column="22"/>
+          </region>
+        </name>
+        <source container="/0/@nodes.18/@EOLElement">
+          <region>
+            <start line="19" column="11"/>
+            <end line="19" column="38"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/0/@nodes.18/@EOLElement/@source" modelName="Competition" elementName="Competitor">
+            <region>
+              <start line="19" column="16"/>
+              <end line="19" column="38"/>
+            </region>
+          </resolvedType>
+          <name container="/0/@nodes.18/@EOLElement/@source" name="co">
+            <region>
+              <start line="19" column="11"/>
+              <end line="19" column="13"/>
+            </region>
+          </name>
+        </source>
+        <targets container="/0/@nodes.18/@EOLElement">
+          <region>
+            <start line="20" column="4"/>
+            <end line="20" column="21"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/0/@nodes.18/@EOLElement/@targets.0" modelName="TVApp" elementName="Choice">
+            <region>
+              <start line="20" column="9"/>
+              <end line="20" column="21"/>
+            </region>
+          </resolvedType>
+          <name container="/0/@nodes.18/@EOLElement/@targets.0" name="ch">
+            <region>
+              <start line="20" column="4"/>
+              <end line="20" column="6"/>
+            </region>
+          </name>
+        </targets>
+        <body container="/0/@nodes.18/@EOLElement">
+          <region>
+            <start line="22" column="1"/>
+            <end line="22" column="19"/>
+          </region>
+          <statements xsi:type="eol:AssignmentStatement" container="/0/@nodes.18/@EOLElement/@body">
+            <region>
+              <start line="22" column="1"/>
+              <end line="22" column="19"/>
+            </region>
+            <lhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.18/@EOLElement/@body/@statements.0">
+              <region>
+                <start line="22" column="1"/>
+                <end line="22" column="8"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/0/@nodes.18/@EOLElement/@body/@statements.0/@lhs" name="ch">
+                <region>
+                  <start line="22" column="1"/>
+                  <end line="22" column="3"/>
+                </region>
+              </target>
+              <property container="/0/@nodes.18/@EOLElement/@body/@statements.0/@lhs" name="name">
+                <region>
+                  <start line="22" column="4"/>
+                  <end line="22" column="8"/>
+                </region>
+              </property>
+            </lhs>
+            <rhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.18/@EOLElement/@body/@statements.0">
+              <region>
+                <start line="22" column="11"/>
+                <end line="22" column="18"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/0/@nodes.18/@EOLElement/@body/@statements.0/@rhs" name="co">
+                <region>
+                  <start line="22" column="11"/>
+                  <end line="22" column="13"/>
+                </region>
+              </target>
+              <property container="/0/@nodes.18/@EOLElement/@body/@statements.0/@rhs" name="name">
+                <region>
+                  <start line="22" column="14"/>
+                  <end line="22" column="18"/>
+                </region>
+              </property>
+            </rhs>
+          </statements>
+        </body>
+      </EOLElement>
+    </nodes>
+    <nodes name="20" outgoing="/0/@nodes.20" incoming="/0/@nodes.18">
+      <EOLElement xsi:type="eol:StringExpression" value="Create TraceabilityLink for Competitor2Choice"/>
+    </nodes>
+    <nodes name="21" outgoing="/0/@nodes.21 /0/@nodes.22" incoming="/0/@nodes.19 /0/@nodes.18 /0/@nodes.21">
+      <EOLElement xsi:type="eol:StringExpression" value="Check TraceabilityLink for Competitor2Choice"/>
+    </nodes>
+    <nodes name="22" outgoing="/0/@nodes.20" incoming="/0/@nodes.20">
+      <EOLElement xsi:type="eol:AssignmentStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.1/@body"/>
+        <region>
+          <start line="22" column="1"/>
+          <end line="22" column="19"/>
+        </region>
+        <lhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.21/@EOLElement">
+          <region>
+            <start line="22" column="1"/>
+            <end line="22" column="8"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/0/@nodes.21/@EOLElement/@lhs" name="ch">
+            <region>
+              <start line="22" column="1"/>
+              <end line="22" column="3"/>
+            </region>
+          </target>
+          <property container="/0/@nodes.21/@EOLElement/@lhs" name="name">
+            <region>
+              <start line="22" column="4"/>
+              <end line="22" column="8"/>
+            </region>
+          </property>
+        </lhs>
+        <rhs xsi:type="eol:PropertyCallExpression" container="/0/@nodes.21/@EOLElement">
+          <region>
+            <start line="22" column="11"/>
+            <end line="22" column="18"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/0/@nodes.21/@EOLElement/@rhs" name="co">
+            <region>
+              <start line="22" column="11"/>
+              <end line="22" column="13"/>
+            </region>
+          </target>
+          <property container="/0/@nodes.21/@EOLElement/@rhs" name="name">
+            <region>
+              <start line="22" column="14"/>
+              <end line="22" column="18"/>
+            </region>
+          </property>
+        </rhs>
+      </EOLElement>
+    </nodes>
+    <nodes name="end" incoming="/0/@nodes.20"/>
+  </CFG:CFG>
+  <CFG:CFG>
+    <nodes name="1" outgoing="/1/@nodes.1 /1/@nodes.2">
+      <EOLElement xsi:type="etl:TransformationRule">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#/"/>
+        <region>
+          <start line="2"/>
+          <end line="16" column="1"/>
+        </region>
+        <name container="/1/@nodes.0/@EOLElement" name="Competition2Application">
+          <region>
+            <start line="2" column="5"/>
+            <end line="2" column="28"/>
+          </region>
+        </name>
+        <source container="/1/@nodes.0/@EOLElement">
+          <region>
+            <start line="3" column="11"/>
+            <end line="3" column="38"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/1/@nodes.0/@EOLElement/@source" modelName="Competition" elementName="Competition">
+            <region>
+              <start line="3" column="15"/>
+              <end line="3" column="38"/>
+            </region>
+          </resolvedType>
+          <name container="/1/@nodes.0/@EOLElement/@source" name="c">
+            <region>
+              <start line="3" column="11"/>
+              <end line="3" column="12"/>
+            </region>
+          </name>
+        </source>
+        <targets container="/1/@nodes.0/@EOLElement">
+          <region>
+            <start line="4" column="4"/>
+            <end line="4" column="25"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/1/@nodes.0/@EOLElement/@targets.0" modelName="TVApp" elementName="Application">
+            <region>
+              <start line="4" column="8"/>
+              <end line="4" column="25"/>
+            </region>
+          </resolvedType>
+          <name container="/1/@nodes.0/@EOLElement/@targets.0" name="a">
+            <region>
+              <start line="4" column="4"/>
+              <end line="4" column="5"/>
+            </region>
+          </name>
+        </targets>
+        <targets container="/1/@nodes.0/@EOLElement">
+          <region>
+            <start line="4" column="27"/>
+            <end line="4" column="41"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/1/@nodes.0/@EOLElement/@targets.1" modelName="TVApp" elementName="Vote">
+            <region>
+              <start line="4" column="31"/>
+              <end line="4" column="41"/>
+            </region>
+          </resolvedType>
+          <name container="/1/@nodes.0/@EOLElement/@targets.1" name="v">
+            <region>
+              <start line="4" column="27"/>
+              <end line="4" column="28"/>
+            </region>
+          </name>
+        </targets>
+        <body container="/1/@nodes.0/@EOLElement">
+          <region>
+            <start line="6" column="1"/>
+            <end line="15" column="2"/>
+          </region>
+          <statements xsi:type="eol:AssignmentStatement" container="/1/@nodes.0/@EOLElement/@body">
+            <region>
+              <start line="6" column="1"/>
+              <end line="6" column="34"/>
+            </region>
+            <lhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.0">
+              <region>
+                <start line="6" column="1"/>
+                <end line="6" column="7"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.0/@lhs" name="a">
+                <region>
+                  <start line="6" column="1"/>
+                  <end line="6" column="2"/>
+                </region>
+              </target>
+              <property container="/1/@nodes.0/@EOLElement/@body/@statements.0/@lhs" name="name">
+                <region>
+                  <start line="6" column="3"/>
+                  <end line="6" column="7"/>
+                </region>
+              </property>
+            </lhs>
+            <rhs xsi:type="eol:PlusOperatorExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.0">
+              <region>
+                <start line="6" column="10"/>
+                <end line="6" column="33"/>
+              </region>
+              <lhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.0/@rhs">
+                <region>
+                  <start line="6" column="10"/>
+                  <end line="6" column="16"/>
+                </region>
+                <target xsi:type="eol:NameExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.0/@rhs/@lhs" name="c">
+                  <region>
+                    <start line="6" column="10"/>
+                    <end line="6" column="11"/>
+                  </region>
+                </target>
+                <property container="/1/@nodes.0/@EOLElement/@body/@statements.0/@rhs/@lhs" name="name">
+                  <region>
+                    <start line="6" column="12"/>
+                    <end line="6" column="16"/>
+                  </region>
+                </property>
+              </lhs>
+              <rhs xsi:type="eol:StringExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.0/@rhs" value=" Application">
+                <region>
+                  <start line="6" column="19"/>
+                  <end line="6" column="33"/>
+                </region>
+                <resolvedType xsi:type="eol:StringType" container="/1/@nodes.0/@EOLElement/@body/@statements.0/@rhs/@rhs">
+                  <region>
+                    <start line="6" column="19"/>
+                    <end line="6" column="33"/>
+                  </region>
+                </resolvedType>
+              </rhs>
+            </rhs>
+          </statements>
+          <statements xsi:type="eol:AssignmentStatement" container="/1/@nodes.0/@EOLElement/@body">
+            <region>
+              <start line="7" column="1"/>
+              <end line="7" column="45"/>
+            </region>
+            <lhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.1">
+              <region>
+                <start line="7" column="1"/>
+                <end line="7" column="7"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.1/@lhs" name="v">
+                <region>
+                  <start line="7" column="1"/>
+                  <end line="7" column="2"/>
+                </region>
+              </target>
+              <property container="/1/@nodes.0/@EOLElement/@body/@statements.1/@lhs" name="name">
+                <region>
+                  <start line="7" column="3"/>
+                  <end line="7" column="7"/>
+                </region>
+              </property>
+            </lhs>
+            <rhs xsi:type="eol:PlusOperatorExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.1">
+              <region>
+                <start line="7" column="10"/>
+                <end line="7" column="44"/>
+              </region>
+              <lhs xsi:type="eol:PlusOperatorExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.1/@rhs">
+                <region>
+                  <start line="7" column="10"/>
+                  <end line="7" column="38"/>
+                </region>
+                <lhs xsi:type="eol:StringExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.1/@rhs/@lhs" value="Who will win the ">
+                  <region>
+                    <start line="7" column="10"/>
+                    <end line="7" column="29"/>
+                  </region>
+                  <resolvedType xsi:type="eol:StringType" container="/1/@nodes.0/@EOLElement/@body/@statements.1/@rhs/@lhs/@lhs">
+                    <region>
+                      <start line="7" column="10"/>
+                      <end line="7" column="29"/>
+                    </region>
+                  </resolvedType>
+                </lhs>
+                <rhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.1/@rhs/@lhs">
+                  <region>
+                    <start line="7" column="32"/>
+                    <end line="7" column="38"/>
+                  </region>
+                  <target xsi:type="eol:NameExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.1/@rhs/@lhs/@rhs" name="c">
+                    <region>
+                      <start line="7" column="32"/>
+                      <end line="7" column="33"/>
+                    </region>
+                  </target>
+                  <property container="/1/@nodes.0/@EOLElement/@body/@statements.1/@rhs/@lhs/@rhs" name="name">
+                    <region>
+                      <start line="7" column="34"/>
+                      <end line="7" column="38"/>
+                    </region>
+                  </property>
+                </rhs>
+              </lhs>
+              <rhs xsi:type="eol:StringExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.1/@rhs" value="?">
+                <region>
+                  <start line="7" column="41"/>
+                  <end line="7" column="44"/>
+                </region>
+                <resolvedType xsi:type="eol:StringType" container="/1/@nodes.0/@EOLElement/@body/@statements.1/@rhs/@rhs">
+                  <region>
+                    <start line="7" column="41"/>
+                    <end line="7" column="44"/>
+                  </region>
+                </resolvedType>
+              </rhs>
+            </rhs>
+          </statements>
+          <statements xsi:type="eol:ExpressionStatement" container="/1/@nodes.0/@EOLElement/@body">
+            <region>
+              <start line="8" column="1"/>
+              <end line="8" column="19"/>
+            </region>
+            <expression xsi:type="eol:MethodCallExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.2">
+              <region>
+                <start line="8" column="1"/>
+                <end line="8" column="19"/>
+              </region>
+              <target xsi:type="eol:PropertyCallExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.2/@expression">
+                <region>
+                  <start line="8" column="1"/>
+                  <end line="8" column="11"/>
+                </region>
+                <target xsi:type="eol:NameExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.2/@expression/@target" name="a">
+                  <region>
+                    <start line="8" column="1"/>
+                    <end line="8" column="2"/>
+                  </region>
+                </target>
+                <property container="/1/@nodes.0/@EOLElement/@body/@statements.2/@expression/@target" name="contents">
+                  <region>
+                    <start line="8" column="3"/>
+                    <end line="8" column="11"/>
+                  </region>
+                </property>
+              </target>
+              <arguments xsi:type="eol:NameExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.2/@expression" name="v">
+                <region>
+                  <start line="8" column="16"/>
+                  <end line="8" column="17"/>
+                </region>
+              </arguments>
+              <method container="/1/@nodes.0/@EOLElement/@body/@statements.2/@expression" name="add">
+                <region>
+                  <start line="8" column="12"/>
+                  <end line="8" column="18"/>
+                </region>
+              </method>
+            </expression>
+          </statements>
+          <statements xsi:type="eol:ForStatement" container="/1/@nodes.0/@EOLElement/@body">
+            <region>
+              <start line="10" column="1"/>
+              <end line="15" column="2"/>
+            </region>
+            <iterator container="/1/@nodes.0/@EOLElement/@body/@statements.3">
+              <region>
+                <start line="10" column="6"/>
+                <end line="10" column="7"/>
+              </region>
+              <resolvedType xsi:type="eol:AnyType" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@iterator">
+                <region>
+                  <start line="10" column="6"/>
+                  <end line="10" column="7"/>
+                </region>
+              </resolvedType>
+              <name container="/1/@nodes.0/@EOLElement/@body/@statements.3/@iterator" name="g">
+                <region>
+                  <start line="10" column="6"/>
+                  <end line="10" column="7"/>
+                </region>
+              </name>
+            </iterator>
+            <condition xsi:type="eol:PropertyCallExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.3">
+              <region>
+                <start line="10" column="11"/>
+                <end line="10" column="19"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@condition" name="c">
+                <region>
+                  <start line="10" column="11"/>
+                  <end line="10" column="12"/>
+                </region>
+              </target>
+              <property container="/1/@nodes.0/@EOLElement/@body/@statements.3/@condition" name="groups">
+                <region>
+                  <start line="10" column="13"/>
+                  <end line="10" column="19"/>
+                </region>
+              </property>
+            </condition>
+            <body container="/1/@nodes.0/@EOLElement/@body/@statements.3">
+              <region>
+                <start line="10" column="21"/>
+                <end line="15" column="2"/>
+              </region>
+              <block container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body">
+                <region>
+                  <start line="10" column="21"/>
+                  <end line="15" column="2"/>
+                </region>
+                <statements xsi:type="eol:ExpressionStatement" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block">
+                  <region>
+                    <start line="11" column="2"/>
+                    <end line="11" column="33"/>
+                  </region>
+                  <expression xsi:type="eol:MethodCallExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.0">
+                    <region>
+                      <start line="11" column="2"/>
+                      <end line="11" column="33"/>
+                    </region>
+                    <target xsi:type="eol:PropertyCallExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.0/@expression">
+                      <region>
+                        <start line="11" column="2"/>
+                        <end line="11" column="12"/>
+                      </region>
+                      <target xsi:type="eol:NameExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.0/@expression/@target" name="v">
+                        <region>
+                          <start line="11" column="2"/>
+                          <end line="11" column="3"/>
+                        </region>
+                      </target>
+                      <property container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.0/@expression/@target" name="contents">
+                        <region>
+                          <start line="11" column="4"/>
+                          <end line="11" column="12"/>
+                        </region>
+                      </property>
+                    </target>
+                    <arguments xsi:type="eol:MethodCallExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.0/@expression">
+                      <region>
+                        <start line="11" column="17"/>
+                        <end line="11" column="31"/>
+                      </region>
+                      <target xsi:type="eol:NameExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.0/@expression/@arguments.0" name="g">
+                        <region>
+                          <start line="11" column="17"/>
+                          <end line="11" column="18"/>
+                        </region>
+                      </target>
+                      <method container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.0/@expression/@arguments.0" name="equivalent">
+                        <region>
+                          <start line="11" column="19"/>
+                          <end line="11" column="31"/>
+                        </region>
+                      </method>
+                    </arguments>
+                    <method container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.0/@expression" name="add">
+                      <region>
+                        <start line="11" column="13"/>
+                        <end line="11" column="32"/>
+                      </region>
+                    </method>
+                  </expression>
+                </statements>
+                <statements xsi:type="eol:ForStatement" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block">
+                  <region>
+                    <start line="12" column="2"/>
+                    <end line="14" column="3"/>
+                  </region>
+                  <iterator container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1">
+                    <region>
+                      <start line="12" column="7"/>
+                      <end line="12" column="11"/>
+                    </region>
+                    <resolvedType xsi:type="eol:AnyType" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@iterator">
+                      <region>
+                        <start line="12" column="7"/>
+                        <end line="12" column="11"/>
+                      </region>
+                    </resolvedType>
+                    <name container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@iterator" name="comp">
+                      <region>
+                        <start line="12" column="7"/>
+                        <end line="12" column="11"/>
+                      </region>
+                    </name>
+                  </iterator>
+                  <condition xsi:type="eol:PropertyCallExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1">
+                    <region>
+                      <start line="12" column="15"/>
+                      <end line="12" column="28"/>
+                    </region>
+                    <target xsi:type="eol:NameExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@condition" name="g">
+                      <region>
+                        <start line="12" column="15"/>
+                        <end line="12" column="16"/>
+                      </region>
+                    </target>
+                    <property container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@condition" name="competitors">
+                      <region>
+                        <start line="12" column="17"/>
+                        <end line="12" column="28"/>
+                      </region>
+                    </property>
+                  </condition>
+                  <body container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1">
+                    <region>
+                      <start line="12" column="30"/>
+                      <end line="14" column="3"/>
+                    </region>
+                    <block container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body">
+                      <region>
+                        <start line="12" column="30"/>
+                        <end line="14" column="3"/>
+                      </region>
+                      <statements xsi:type="eol:ExpressionStatement" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block">
+                        <region>
+                          <start line="13" column="3"/>
+                          <end line="13" column="37"/>
+                        </region>
+                        <expression xsi:type="eol:MethodCallExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block/@statements.0">
+                          <region>
+                            <start line="13" column="3"/>
+                            <end line="13" column="37"/>
+                          </region>
+                          <target xsi:type="eol:PropertyCallExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block/@statements.0/@expression">
+                            <region>
+                              <start line="13" column="3"/>
+                              <end line="13" column="13"/>
+                            </region>
+                            <target xsi:type="eol:NameExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block/@statements.0/@expression/@target" name="v">
+                              <region>
+                                <start line="13" column="3"/>
+                                <end line="13" column="4"/>
+                              </region>
+                            </target>
+                            <property container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block/@statements.0/@expression/@target" name="contents">
+                              <region>
+                                <start line="13" column="5"/>
+                                <end line="13" column="13"/>
+                              </region>
+                            </property>
+                          </target>
+                          <arguments xsi:type="eol:MethodCallExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block/@statements.0/@expression">
+                            <region>
+                              <start line="13" column="18"/>
+                              <end line="13" column="35"/>
+                            </region>
+                            <target xsi:type="eol:NameExpression" container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block/@statements.0/@expression/@arguments.0" name="comp">
+                              <region>
+                                <start line="13" column="18"/>
+                                <end line="13" column="22"/>
+                              </region>
+                            </target>
+                            <method container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block/@statements.0/@expression/@arguments.0" name="equivalent">
+                              <region>
+                                <start line="13" column="23"/>
+                                <end line="13" column="35"/>
+                              </region>
+                            </method>
+                          </arguments>
+                          <method container="/1/@nodes.0/@EOLElement/@body/@statements.3/@body/@block/@statements.1/@body/@block/@statements.0/@expression" name="add">
+                            <region>
+                              <start line="13" column="14"/>
+                              <end line="13" column="36"/>
+                            </region>
+                          </method>
+                        </expression>
+                      </statements>
+                    </block>
+                  </body>
+                </statements>
+              </block>
+            </body>
+          </statements>
+        </body>
+      </EOLElement>
+    </nodes>
+    <nodes name="2" outgoing="/1/@nodes.2" incoming="/1/@nodes.0">
+      <EOLElement xsi:type="eol:StringExpression" value="Create TraceabilityLink for Competition2Application"/>
+    </nodes>
+    <nodes name="3" outgoing="/1/@nodes.3 /1/@nodes.18" incoming="/1/@nodes.1 /1/@nodes.0 /1/@nodes.6">
+      <EOLElement xsi:type="eol:StringExpression" value="Check TraceabilityLink for Competition2Application"/>
+    </nodes>
+    <nodes name="4" outgoing="/1/@nodes.4" incoming="/1/@nodes.2">
+      <EOLElement xsi:type="eol:AssignmentStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.0/@body"/>
+        <region>
+          <start line="6" column="1"/>
+          <end line="6" column="34"/>
+        </region>
+        <lhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.3/@EOLElement">
+          <region>
+            <start line="6" column="1"/>
+            <end line="6" column="7"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/1/@nodes.3/@EOLElement/@lhs" name="a">
+            <region>
+              <start line="6" column="1"/>
+              <end line="6" column="2"/>
+            </region>
+          </target>
+          <property container="/1/@nodes.3/@EOLElement/@lhs" name="name">
+            <region>
+              <start line="6" column="3"/>
+              <end line="6" column="7"/>
+            </region>
+          </property>
+        </lhs>
+        <rhs xsi:type="eol:PlusOperatorExpression" container="/1/@nodes.3/@EOLElement">
+          <region>
+            <start line="6" column="10"/>
+            <end line="6" column="33"/>
+          </region>
+          <lhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.3/@EOLElement/@rhs">
+            <region>
+              <start line="6" column="10"/>
+              <end line="6" column="16"/>
+            </region>
+            <target xsi:type="eol:NameExpression" container="/1/@nodes.3/@EOLElement/@rhs/@lhs" name="c">
+              <region>
+                <start line="6" column="10"/>
+                <end line="6" column="11"/>
+              </region>
+            </target>
+            <property container="/1/@nodes.3/@EOLElement/@rhs/@lhs" name="name">
+              <region>
+                <start line="6" column="12"/>
+                <end line="6" column="16"/>
+              </region>
+            </property>
+          </lhs>
+          <rhs xsi:type="eol:StringExpression" container="/1/@nodes.3/@EOLElement/@rhs" value=" Application">
+            <region>
+              <start line="6" column="19"/>
+              <end line="6" column="33"/>
+            </region>
+            <resolvedType xsi:type="eol:StringType" container="/1/@nodes.3/@EOLElement/@rhs/@rhs">
+              <region>
+                <start line="6" column="19"/>
+                <end line="6" column="33"/>
+              </region>
+            </resolvedType>
+          </rhs>
+        </rhs>
+      </EOLElement>
+    </nodes>
+    <nodes name="5" outgoing="/1/@nodes.5" incoming="/1/@nodes.3">
+      <EOLElement xsi:type="eol:AssignmentStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.0/@body"/>
+        <region>
+          <start line="7" column="1"/>
+          <end line="7" column="45"/>
+        </region>
+        <lhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.4/@EOLElement">
+          <region>
+            <start line="7" column="1"/>
+            <end line="7" column="7"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/1/@nodes.4/@EOLElement/@lhs" name="v">
+            <region>
+              <start line="7" column="1"/>
+              <end line="7" column="2"/>
+            </region>
+          </target>
+          <property container="/1/@nodes.4/@EOLElement/@lhs" name="name">
+            <region>
+              <start line="7" column="3"/>
+              <end line="7" column="7"/>
+            </region>
+          </property>
+        </lhs>
+        <rhs xsi:type="eol:PlusOperatorExpression" container="/1/@nodes.4/@EOLElement">
+          <region>
+            <start line="7" column="10"/>
+            <end line="7" column="44"/>
+          </region>
+          <lhs xsi:type="eol:PlusOperatorExpression" container="/1/@nodes.4/@EOLElement/@rhs">
+            <region>
+              <start line="7" column="10"/>
+              <end line="7" column="38"/>
+            </region>
+            <lhs xsi:type="eol:StringExpression" container="/1/@nodes.4/@EOLElement/@rhs/@lhs" value="Who will win the ">
+              <region>
+                <start line="7" column="10"/>
+                <end line="7" column="29"/>
+              </region>
+              <resolvedType xsi:type="eol:StringType" container="/1/@nodes.4/@EOLElement/@rhs/@lhs/@lhs">
+                <region>
+                  <start line="7" column="10"/>
+                  <end line="7" column="29"/>
+                </region>
+              </resolvedType>
+            </lhs>
+            <rhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.4/@EOLElement/@rhs/@lhs">
+              <region>
+                <start line="7" column="32"/>
+                <end line="7" column="38"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/1/@nodes.4/@EOLElement/@rhs/@lhs/@rhs" name="c">
+                <region>
+                  <start line="7" column="32"/>
+                  <end line="7" column="33"/>
+                </region>
+              </target>
+              <property container="/1/@nodes.4/@EOLElement/@rhs/@lhs/@rhs" name="name">
+                <region>
+                  <start line="7" column="34"/>
+                  <end line="7" column="38"/>
+                </region>
+              </property>
+            </rhs>
+          </lhs>
+          <rhs xsi:type="eol:StringExpression" container="/1/@nodes.4/@EOLElement/@rhs" value="?">
+            <region>
+              <start line="7" column="41"/>
+              <end line="7" column="44"/>
+            </region>
+            <resolvedType xsi:type="eol:StringType" container="/1/@nodes.4/@EOLElement/@rhs/@rhs">
+              <region>
+                <start line="7" column="41"/>
+                <end line="7" column="44"/>
+              </region>
+            </resolvedType>
+          </rhs>
+        </rhs>
+      </EOLElement>
+    </nodes>
+    <nodes name="6" outgoing="/1/@nodes.6" incoming="/1/@nodes.4">
+      <EOLElement xsi:type="eol:ExpressionStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.0/@body"/>
+        <region>
+          <start line="8" column="1"/>
+          <end line="8" column="19"/>
+        </region>
+        <expression xsi:type="eol:MethodCallExpression" container="/1/@nodes.5/@EOLElement">
+          <region>
+            <start line="8" column="1"/>
+            <end line="8" column="19"/>
+          </region>
+          <target xsi:type="eol:PropertyCallExpression" container="/1/@nodes.5/@EOLElement/@expression">
+            <region>
+              <start line="8" column="1"/>
+              <end line="8" column="11"/>
+            </region>
+            <target xsi:type="eol:NameExpression" container="/1/@nodes.5/@EOLElement/@expression/@target" name="a">
+              <region>
+                <start line="8" column="1"/>
+                <end line="8" column="2"/>
+              </region>
+            </target>
+            <property container="/1/@nodes.5/@EOLElement/@expression/@target" name="contents">
+              <region>
+                <start line="8" column="3"/>
+                <end line="8" column="11"/>
+              </region>
+            </property>
+          </target>
+          <arguments xsi:type="eol:NameExpression" container="/1/@nodes.5/@EOLElement/@expression" name="v">
+            <region>
+              <start line="8" column="16"/>
+              <end line="8" column="17"/>
+            </region>
+          </arguments>
+          <method container="/1/@nodes.5/@EOLElement/@expression" name="add">
+            <region>
+              <start line="8" column="12"/>
+              <end line="8" column="18"/>
+            </region>
+          </method>
+        </expression>
+      </EOLElement>
+    </nodes>
+    <nodes name="7" outgoing="/1/@nodes.7 /1/@nodes.2" incoming="/1/@nodes.5 /1/@nodes.12">
+      <EOLElement xsi:type="eol:ForStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.0/@body"/>
+        <region>
+          <start line="10" column="1"/>
+          <end line="15" column="2"/>
+        </region>
+        <iterator container="/1/@nodes.6/@EOLElement">
+          <region>
+            <start line="10" column="6"/>
+            <end line="10" column="7"/>
+          </region>
+          <resolvedType xsi:type="eol:AnyType" container="/1/@nodes.6/@EOLElement/@iterator">
+            <region>
+              <start line="10" column="6"/>
+              <end line="10" column="7"/>
+            </region>
+          </resolvedType>
+          <name container="/1/@nodes.6/@EOLElement/@iterator" name="g">
+            <region>
+              <start line="10" column="6"/>
+              <end line="10" column="7"/>
+            </region>
+          </name>
+        </iterator>
+        <condition xsi:type="eol:PropertyCallExpression" container="/1/@nodes.6/@EOLElement">
+          <region>
+            <start line="10" column="11"/>
+            <end line="10" column="19"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/1/@nodes.6/@EOLElement/@condition" name="c">
+            <region>
+              <start line="10" column="11"/>
+              <end line="10" column="12"/>
+            </region>
+          </target>
+          <property container="/1/@nodes.6/@EOLElement/@condition" name="groups">
+            <region>
+              <start line="10" column="13"/>
+              <end line="10" column="19"/>
+            </region>
+          </property>
+        </condition>
+        <body container="/1/@nodes.6/@EOLElement">
+          <region>
+            <start line="10" column="21"/>
+            <end line="15" column="2"/>
+          </region>
+          <block container="/1/@nodes.6/@EOLElement/@body">
+            <region>
+              <start line="10" column="21"/>
+              <end line="15" column="2"/>
+            </region>
+            <statements xsi:type="eol:ExpressionStatement" container="/1/@nodes.6/@EOLElement/@body/@block">
+              <region>
+                <start line="11" column="2"/>
+                <end line="11" column="33"/>
+              </region>
+              <expression xsi:type="eol:MethodCallExpression" container="/1/@nodes.6/@EOLElement/@body/@block/@statements.0">
+                <region>
+                  <start line="11" column="2"/>
+                  <end line="11" column="33"/>
+                </region>
+                <target xsi:type="eol:PropertyCallExpression" container="/1/@nodes.6/@EOLElement/@body/@block/@statements.0/@expression">
+                  <region>
+                    <start line="11" column="2"/>
+                    <end line="11" column="12"/>
+                  </region>
+                  <target xsi:type="eol:NameExpression" container="/1/@nodes.6/@EOLElement/@body/@block/@statements.0/@expression/@target" name="v">
+                    <region>
+                      <start line="11" column="2"/>
+                      <end line="11" column="3"/>
+                    </region>
+                  </target>
+                  <property container="/1/@nodes.6/@EOLElement/@body/@block/@statements.0/@expression/@target" name="contents">
+                    <region>
+                      <start line="11" column="4"/>
+                      <end line="11" column="12"/>
+                    </region>
+                  </property>
+                </target>
+                <arguments xsi:type="eol:MethodCallExpression" container="/1/@nodes.6/@EOLElement/@body/@block/@statements.0/@expression">
+                  <region>
+                    <start line="11" column="17"/>
+                    <end line="11" column="31"/>
+                  </region>
+                  <target xsi:type="eol:NameExpression" container="/1/@nodes.6/@EOLElement/@body/@block/@statements.0/@expression/@arguments.0" name="g">
+                    <region>
+                      <start line="11" column="17"/>
+                      <end line="11" column="18"/>
+                    </region>
+                  </target>
+                  <method container="/1/@nodes.6/@EOLElement/@body/@block/@statements.0/@expression/@arguments.0" name="equivalent">
+                    <region>
+                      <start line="11" column="19"/>
+                      <end line="11" column="31"/>
+                    </region>
+                  </method>
+                </arguments>
+                <method container="/1/@nodes.6/@EOLElement/@body/@block/@statements.0/@expression" name="add">
+                  <region>
+                    <start line="11" column="13"/>
+                    <end line="11" column="32"/>
+                  </region>
+                </method>
+              </expression>
+            </statements>
+            <statements xsi:type="eol:ForStatement" container="/1/@nodes.6/@EOLElement/@body/@block">
+              <region>
+                <start line="12" column="2"/>
+                <end line="14" column="3"/>
+              </region>
+              <iterator container="/1/@nodes.6/@EOLElement/@body/@block/@statements.1">
+                <region>
+                  <start line="12" column="7"/>
+                  <end line="12" column="11"/>
+                </region>
+                <resolvedType xsi:type="eol:AnyType" container="/1/@nodes.6/@EOLElement/@body/@block/@statements.1/@iterator">
+                  <region>
+                    <start line="12" column="7"/>
+                    <end line="12" column="11"/>
+                  </region>
+                </resolvedType>
+                <name container="/1/@nodes.6/@EOLElement/@body/@block/@statements.1/@iterator" name="comp">
+                  <region>
+                    <start line="12" column="7"/>
+                    <end line="12" column="11"/>
+                  </region>
+                </name>
+              </iterator>
+              <condition xsi:type="eol:PropertyCallExpression" container="/1/@nodes.6/@EOLElement/@body/@block/@statements.1">
+                <region>
+                  <start line="12" column="15"/>
+                  <end line="12" column="28"/>
+                </region>
+                <target xsi:type="eol:NameExpression" container="/1/@nodes.6/@EOLElement/@body/@block/@statements.1/@condition" name="g">
+                  <region>
+                    <start line="12" column="15"/>
+                    <end line="12" column="16"/>
+                  </region>
+                </target>
+                <property container="/1/@nodes.6/@EOLElement/@body/@block/@statements.1/@condition" name="competitors">
+                  <region>
+                    <start line="12" column="17"/>
+                    <end line="12" column="28"/>
+                  </region>
+                </property>
+              </condition>
+              <body container="/1/@nodes.6/@EOLElement/@body/@block/@statements.1">
+                <region>
+                  <start line="12" column="30"/>
+                  <end line="14" column="3"/>
+                </region>
+                <block container="/1/@nodes.6/@EOLElement/@body/@block/@statements.1/@body">
+                  <region>
+                    <start line="12" column="30"/>
+                    <end line="14" column="3"/>
+                  </region>
+                  <statements xsi:type="eol:ExpressionStatement" container="/1/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block">
+                    <region>
+                      <start line="13" column="3"/>
+                      <end line="13" column="37"/>
+                    </region>
+                    <expression xsi:type="eol:MethodCallExpression" container="/1/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block/@statements.0">
+                      <region>
+                        <start line="13" column="3"/>
+                        <end line="13" column="37"/>
+                      </region>
+                      <target xsi:type="eol:PropertyCallExpression" container="/1/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block/@statements.0/@expression">
+                        <region>
+                          <start line="13" column="3"/>
+                          <end line="13" column="13"/>
+                        </region>
+                        <target xsi:type="eol:NameExpression" container="/1/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block/@statements.0/@expression/@target" name="v">
+                          <region>
+                            <start line="13" column="3"/>
+                            <end line="13" column="4"/>
+                          </region>
+                        </target>
+                        <property container="/1/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block/@statements.0/@expression/@target" name="contents">
+                          <region>
+                            <start line="13" column="5"/>
+                            <end line="13" column="13"/>
+                          </region>
+                        </property>
+                      </target>
+                      <arguments xsi:type="eol:MethodCallExpression" container="/1/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block/@statements.0/@expression">
+                        <region>
+                          <start line="13" column="18"/>
+                          <end line="13" column="35"/>
+                        </region>
+                        <target xsi:type="eol:NameExpression" container="/1/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block/@statements.0/@expression/@arguments.0" name="comp">
+                          <region>
+                            <start line="13" column="18"/>
+                            <end line="13" column="22"/>
+                          </region>
+                        </target>
+                        <method container="/1/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block/@statements.0/@expression/@arguments.0" name="equivalent">
+                          <region>
+                            <start line="13" column="23"/>
+                            <end line="13" column="35"/>
+                          </region>
+                        </method>
+                      </arguments>
+                      <method container="/1/@nodes.6/@EOLElement/@body/@block/@statements.1/@body/@block/@statements.0/@expression" name="add">
+                        <region>
+                          <start line="13" column="14"/>
+                          <end line="13" column="36"/>
+                        </region>
+                      </method>
+                    </expression>
+                  </statements>
+                </block>
+              </body>
+            </statements>
+          </block>
+        </body>
+      </EOLElement>
+    </nodes>
+    <nodes name="8" outgoing="/1/@nodes.8 /1/@nodes.12" incoming="/1/@nodes.6 /1/@nodes.10">
+      <EOLElement xsi:type="eol:ExpressionStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.0/@body/@statements.3/@body/@block"/>
+        <region>
+          <start line="11" column="2"/>
+          <end line="11" column="33"/>
+        </region>
+        <expression xsi:type="eol:MethodCallExpression" container="/1/@nodes.7/@EOLElement">
+          <region>
+            <start line="11" column="2"/>
+            <end line="11" column="33"/>
+          </region>
+          <target xsi:type="eol:PropertyCallExpression" container="/1/@nodes.7/@EOLElement/@expression">
+            <region>
+              <start line="11" column="2"/>
+              <end line="11" column="12"/>
+            </region>
+            <target xsi:type="eol:NameExpression" container="/1/@nodes.7/@EOLElement/@expression/@target" name="v">
+              <region>
+                <start line="11" column="2"/>
+                <end line="11" column="3"/>
+              </region>
+            </target>
+            <property container="/1/@nodes.7/@EOLElement/@expression/@target" name="contents">
+              <region>
+                <start line="11" column="4"/>
+                <end line="11" column="12"/>
+              </region>
+            </property>
+          </target>
+          <arguments xsi:type="eol:MethodCallExpression" container="/1/@nodes.7/@EOLElement/@expression">
+            <region>
+              <start line="11" column="17"/>
+              <end line="11" column="31"/>
+            </region>
+            <target xsi:type="eol:NameExpression" container="/1/@nodes.7/@EOLElement/@expression/@arguments.0" name="g">
+              <region>
+                <start line="11" column="17"/>
+                <end line="11" column="18"/>
+              </region>
+            </target>
+            <method container="/1/@nodes.7/@EOLElement/@expression/@arguments.0" name="equivalent">
+              <region>
+                <start line="11" column="19"/>
+                <end line="11" column="31"/>
+              </region>
+            </method>
+          </arguments>
+          <method container="/1/@nodes.7/@EOLElement/@expression" name="add">
+            <region>
+              <start line="11" column="13"/>
+              <end line="11" column="32"/>
+            </region>
+          </method>
+        </expression>
+      </EOLElement>
+    </nodes>
+    <nodes name="9" outgoing="/1/@nodes.9 /1/@nodes.10" incoming="/1/@nodes.7">
+      <EOLElement xsi:type="etl:TransformationRule">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#/"/>
+        <region>
+          <start line="27"/>
+          <end line="32" column="1"/>
+        </region>
+        <name container="/1/@nodes.8/@EOLElement" name="Group2Label">
+          <region>
+            <start line="27" column="5"/>
+            <end line="27" column="16"/>
+          </region>
+        </name>
+        <source container="/1/@nodes.8/@EOLElement">
+          <region>
+            <start line="28" column="11"/>
+            <end line="28" column="32"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/1/@nodes.8/@EOLElement/@source" modelName="Competition" elementName="Group">
+            <region>
+              <start line="28" column="15"/>
+              <end line="28" column="32"/>
+            </region>
+          </resolvedType>
+          <name container="/1/@nodes.8/@EOLElement/@source" name="g">
+            <region>
+              <start line="28" column="11"/>
+              <end line="28" column="12"/>
+            </region>
+          </name>
+        </source>
+        <targets container="/1/@nodes.8/@EOLElement">
+          <region>
+            <start line="29" column="4"/>
+            <end line="29" column="19"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/1/@nodes.8/@EOLElement/@targets.0" modelName="TVApp" elementName="Label">
+            <region>
+              <start line="29" column="8"/>
+              <end line="29" column="19"/>
+            </region>
+          </resolvedType>
+          <name container="/1/@nodes.8/@EOLElement/@targets.0" name="l">
+            <region>
+              <start line="29" column="4"/>
+              <end line="29" column="5"/>
+            </region>
+          </name>
+        </targets>
+        <body container="/1/@nodes.8/@EOLElement">
+          <region>
+            <start line="31" column="1"/>
+            <end line="31" column="28"/>
+          </region>
+          <statements xsi:type="eol:AssignmentStatement" container="/1/@nodes.8/@EOLElement/@body">
+            <region>
+              <start line="31" column="1"/>
+              <end line="31" column="28"/>
+            </region>
+            <lhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.8/@EOLElement/@body/@statements.0">
+              <region>
+                <start line="31" column="1"/>
+                <end line="31" column="7"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/1/@nodes.8/@EOLElement/@body/@statements.0/@lhs" name="l">
+                <region>
+                  <start line="31" column="1"/>
+                  <end line="31" column="2"/>
+                </region>
+              </target>
+              <property container="/1/@nodes.8/@EOLElement/@body/@statements.0/@lhs" name="name">
+                <region>
+                  <start line="31" column="3"/>
+                  <end line="31" column="7"/>
+                </region>
+              </property>
+            </lhs>
+            <rhs xsi:type="eol:PlusOperatorExpression" container="/1/@nodes.8/@EOLElement/@body/@statements.0">
+              <region>
+                <start line="31" column="10"/>
+                <end line="31" column="27"/>
+              </region>
+              <lhs xsi:type="eol:StringExpression" container="/1/@nodes.8/@EOLElement/@body/@statements.0/@rhs" value="Group ">
+                <region>
+                  <start line="31" column="10"/>
+                  <end line="31" column="18"/>
+                </region>
+                <resolvedType xsi:type="eol:StringType" container="/1/@nodes.8/@EOLElement/@body/@statements.0/@rhs/@lhs">
+                  <region>
+                    <start line="31" column="10"/>
+                    <end line="31" column="18"/>
+                  </region>
+                </resolvedType>
+              </lhs>
+              <rhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.8/@EOLElement/@body/@statements.0/@rhs">
+                <region>
+                  <start line="31" column="21"/>
+                  <end line="31" column="27"/>
+                </region>
+                <target xsi:type="eol:NameExpression" container="/1/@nodes.8/@EOLElement/@body/@statements.0/@rhs/@rhs" name="g">
+                  <region>
+                    <start line="31" column="21"/>
+                    <end line="31" column="22"/>
+                  </region>
+                </target>
+                <property container="/1/@nodes.8/@EOLElement/@body/@statements.0/@rhs/@rhs" name="name">
+                  <region>
+                    <start line="31" column="23"/>
+                    <end line="31" column="27"/>
+                  </region>
+                </property>
+              </rhs>
+            </rhs>
+          </statements>
+        </body>
+        <annotationBlock container="/1/@nodes.8/@EOLElement">
+          <region>
+            <start line="26"/>
+            <end line="26" column="5"/>
+          </region>
+          <statements xsi:type="eol:SimpleAnnotationStatement" container="/1/@nodes.8/@EOLElement/@annotationBlock">
+            <region>
+              <start line="26"/>
+              <end line="26" column="5"/>
+            </region>
+            <name container="/1/@nodes.8/@EOLElement/@annotationBlock/@statements.0" name="lazy">
+              <region>
+                <start line="26"/>
+                <end line="26" column="5"/>
+              </region>
+            </name>
+          </statements>
+        </annotationBlock>
+      </EOLElement>
+    </nodes>
+    <nodes name="10" outgoing="/1/@nodes.10" incoming="/1/@nodes.8">
+      <EOLElement xsi:type="eol:StringExpression" value="Create TraceabilityLink for Group2Label"/>
+    </nodes>
+    <nodes name="11" outgoing="/1/@nodes.11 /1/@nodes.7" incoming="/1/@nodes.9 /1/@nodes.8 /1/@nodes.11">
+      <EOLElement xsi:type="eol:StringExpression" value="Check TraceabilityLink for Group2Label"/>
+    </nodes>
+    <nodes name="12" outgoing="/1/@nodes.10" incoming="/1/@nodes.10">
+      <EOLElement xsi:type="eol:AssignmentStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.2/@body"/>
+        <region>
+          <start line="31" column="1"/>
+          <end line="31" column="28"/>
+        </region>
+        <lhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.11/@EOLElement">
+          <region>
+            <start line="31" column="1"/>
+            <end line="31" column="7"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/1/@nodes.11/@EOLElement/@lhs" name="l">
+            <region>
+              <start line="31" column="1"/>
+              <end line="31" column="2"/>
+            </region>
+          </target>
+          <property container="/1/@nodes.11/@EOLElement/@lhs" name="name">
+            <region>
+              <start line="31" column="3"/>
+              <end line="31" column="7"/>
+            </region>
+          </property>
+        </lhs>
+        <rhs xsi:type="eol:PlusOperatorExpression" container="/1/@nodes.11/@EOLElement">
+          <region>
+            <start line="31" column="10"/>
+            <end line="31" column="27"/>
+          </region>
+          <lhs xsi:type="eol:StringExpression" container="/1/@nodes.11/@EOLElement/@rhs" value="Group ">
+            <region>
+              <start line="31" column="10"/>
+              <end line="31" column="18"/>
+            </region>
+            <resolvedType xsi:type="eol:StringType" container="/1/@nodes.11/@EOLElement/@rhs/@lhs">
+              <region>
+                <start line="31" column="10"/>
+                <end line="31" column="18"/>
+              </region>
+            </resolvedType>
+          </lhs>
+          <rhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.11/@EOLElement/@rhs">
+            <region>
+              <start line="31" column="21"/>
+              <end line="31" column="27"/>
+            </region>
+            <target xsi:type="eol:NameExpression" container="/1/@nodes.11/@EOLElement/@rhs/@rhs" name="g">
+              <region>
+                <start line="31" column="21"/>
+                <end line="31" column="22"/>
+              </region>
+            </target>
+            <property container="/1/@nodes.11/@EOLElement/@rhs/@rhs" name="name">
+              <region>
+                <start line="31" column="23"/>
+                <end line="31" column="27"/>
+              </region>
+            </property>
+          </rhs>
+        </rhs>
+      </EOLElement>
+    </nodes>
+    <nodes name="13" outgoing="/1/@nodes.13 /1/@nodes.6" incoming="/1/@nodes.7 /1/@nodes.13">
+      <EOLElement xsi:type="eol:ForStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.0/@body/@statements.3/@body/@block"/>
+        <region>
+          <start line="12" column="2"/>
+          <end line="14" column="3"/>
+        </region>
+        <iterator container="/1/@nodes.12/@EOLElement">
+          <region>
+            <start line="12" column="7"/>
+            <end line="12" column="11"/>
+          </region>
+          <resolvedType xsi:type="eol:AnyType" container="/1/@nodes.12/@EOLElement/@iterator">
+            <region>
+              <start line="12" column="7"/>
+              <end line="12" column="11"/>
+            </region>
+          </resolvedType>
+          <name container="/1/@nodes.12/@EOLElement/@iterator" name="comp">
+            <region>
+              <start line="12" column="7"/>
+              <end line="12" column="11"/>
+            </region>
+          </name>
+        </iterator>
+        <condition xsi:type="eol:PropertyCallExpression" container="/1/@nodes.12/@EOLElement">
+          <region>
+            <start line="12" column="15"/>
+            <end line="12" column="28"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/1/@nodes.12/@EOLElement/@condition" name="g">
+            <region>
+              <start line="12" column="15"/>
+              <end line="12" column="16"/>
+            </region>
+          </target>
+          <property container="/1/@nodes.12/@EOLElement/@condition" name="competitors">
+            <region>
+              <start line="12" column="17"/>
+              <end line="12" column="28"/>
+            </region>
+          </property>
+        </condition>
+        <body container="/1/@nodes.12/@EOLElement">
+          <region>
+            <start line="12" column="30"/>
+            <end line="14" column="3"/>
+          </region>
+          <block container="/1/@nodes.12/@EOLElement/@body">
+            <region>
+              <start line="12" column="30"/>
+              <end line="14" column="3"/>
+            </region>
+            <statements xsi:type="eol:ExpressionStatement" container="/1/@nodes.12/@EOLElement/@body/@block">
+              <region>
+                <start line="13" column="3"/>
+                <end line="13" column="37"/>
+              </region>
+              <expression xsi:type="eol:MethodCallExpression" container="/1/@nodes.12/@EOLElement/@body/@block/@statements.0">
+                <region>
+                  <start line="13" column="3"/>
+                  <end line="13" column="37"/>
+                </region>
+                <target xsi:type="eol:PropertyCallExpression" container="/1/@nodes.12/@EOLElement/@body/@block/@statements.0/@expression">
+                  <region>
+                    <start line="13" column="3"/>
+                    <end line="13" column="13"/>
+                  </region>
+                  <target xsi:type="eol:NameExpression" container="/1/@nodes.12/@EOLElement/@body/@block/@statements.0/@expression/@target" name="v">
+                    <region>
+                      <start line="13" column="3"/>
+                      <end line="13" column="4"/>
+                    </region>
+                  </target>
+                  <property container="/1/@nodes.12/@EOLElement/@body/@block/@statements.0/@expression/@target" name="contents">
+                    <region>
+                      <start line="13" column="5"/>
+                      <end line="13" column="13"/>
+                    </region>
+                  </property>
+                </target>
+                <arguments xsi:type="eol:MethodCallExpression" container="/1/@nodes.12/@EOLElement/@body/@block/@statements.0/@expression">
+                  <region>
+                    <start line="13" column="18"/>
+                    <end line="13" column="35"/>
+                  </region>
+                  <target xsi:type="eol:NameExpression" container="/1/@nodes.12/@EOLElement/@body/@block/@statements.0/@expression/@arguments.0" name="comp">
+                    <region>
+                      <start line="13" column="18"/>
+                      <end line="13" column="22"/>
+                    </region>
+                  </target>
+                  <method container="/1/@nodes.12/@EOLElement/@body/@block/@statements.0/@expression/@arguments.0" name="equivalent">
+                    <region>
+                      <start line="13" column="23"/>
+                      <end line="13" column="35"/>
+                    </region>
+                  </method>
+                </arguments>
+                <method container="/1/@nodes.12/@EOLElement/@body/@block/@statements.0/@expression" name="add">
+                  <region>
+                    <start line="13" column="14"/>
+                    <end line="13" column="36"/>
+                  </region>
+                </method>
+              </expression>
+            </statements>
+          </block>
+        </body>
+      </EOLElement>
+    </nodes>
+    <nodes name="14" outgoing="/1/@nodes.14 /1/@nodes.12" incoming="/1/@nodes.12 /1/@nodes.16">
+      <EOLElement xsi:type="eol:ExpressionStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.0/@body/@statements.3/@body/@block/@statements.1/@body/@block"/>
+        <region>
+          <start line="13" column="3"/>
+          <end line="13" column="37"/>
+        </region>
+        <expression xsi:type="eol:MethodCallExpression" container="/1/@nodes.13/@EOLElement">
+          <region>
+            <start line="13" column="3"/>
+            <end line="13" column="37"/>
+          </region>
+          <target xsi:type="eol:PropertyCallExpression" container="/1/@nodes.13/@EOLElement/@expression">
+            <region>
+              <start line="13" column="3"/>
+              <end line="13" column="13"/>
+            </region>
+            <target xsi:type="eol:NameExpression" container="/1/@nodes.13/@EOLElement/@expression/@target" name="v">
+              <region>
+                <start line="13" column="3"/>
+                <end line="13" column="4"/>
+              </region>
+            </target>
+            <property container="/1/@nodes.13/@EOLElement/@expression/@target" name="contents">
+              <region>
+                <start line="13" column="5"/>
+                <end line="13" column="13"/>
+              </region>
+            </property>
+          </target>
+          <arguments xsi:type="eol:MethodCallExpression" container="/1/@nodes.13/@EOLElement/@expression">
+            <region>
+              <start line="13" column="18"/>
+              <end line="13" column="35"/>
+            </region>
+            <target xsi:type="eol:NameExpression" container="/1/@nodes.13/@EOLElement/@expression/@arguments.0" name="comp">
+              <region>
+                <start line="13" column="18"/>
+                <end line="13" column="22"/>
+              </region>
+            </target>
+            <method container="/1/@nodes.13/@EOLElement/@expression/@arguments.0" name="equivalent">
+              <region>
+                <start line="13" column="23"/>
+                <end line="13" column="35"/>
+              </region>
+            </method>
+          </arguments>
+          <method container="/1/@nodes.13/@EOLElement/@expression" name="add">
+            <region>
+              <start line="13" column="14"/>
+              <end line="13" column="36"/>
+            </region>
+          </method>
+        </expression>
+      </EOLElement>
+    </nodes>
+    <nodes name="15" outgoing="/1/@nodes.15 /1/@nodes.16" incoming="/1/@nodes.13">
+      <EOLElement xsi:type="etl:TransformationRule">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#/"/>
+        <region>
+          <start line="18"/>
+          <end line="24" column="1"/>
+        </region>
+        <name container="/1/@nodes.14/@EOLElement" name="Competitor2Choice">
+          <region>
+            <start line="18" column="5"/>
+            <end line="18" column="22"/>
+          </region>
+        </name>
+        <source container="/1/@nodes.14/@EOLElement">
+          <region>
+            <start line="19" column="11"/>
+            <end line="19" column="38"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/1/@nodes.14/@EOLElement/@source" modelName="Competition" elementName="Competitor">
+            <region>
+              <start line="19" column="16"/>
+              <end line="19" column="38"/>
+            </region>
+          </resolvedType>
+          <name container="/1/@nodes.14/@EOLElement/@source" name="co">
+            <region>
+              <start line="19" column="11"/>
+              <end line="19" column="13"/>
+            </region>
+          </name>
+        </source>
+        <targets container="/1/@nodes.14/@EOLElement">
+          <region>
+            <start line="20" column="4"/>
+            <end line="20" column="21"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/1/@nodes.14/@EOLElement/@targets.0" modelName="TVApp" elementName="Choice">
+            <region>
+              <start line="20" column="9"/>
+              <end line="20" column="21"/>
+            </region>
+          </resolvedType>
+          <name container="/1/@nodes.14/@EOLElement/@targets.0" name="ch">
+            <region>
+              <start line="20" column="4"/>
+              <end line="20" column="6"/>
+            </region>
+          </name>
+        </targets>
+        <body container="/1/@nodes.14/@EOLElement">
+          <region>
+            <start line="22" column="1"/>
+            <end line="22" column="19"/>
+          </region>
+          <statements xsi:type="eol:AssignmentStatement" container="/1/@nodes.14/@EOLElement/@body">
+            <region>
+              <start line="22" column="1"/>
+              <end line="22" column="19"/>
+            </region>
+            <lhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.14/@EOLElement/@body/@statements.0">
+              <region>
+                <start line="22" column="1"/>
+                <end line="22" column="8"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/1/@nodes.14/@EOLElement/@body/@statements.0/@lhs" name="ch">
+                <region>
+                  <start line="22" column="1"/>
+                  <end line="22" column="3"/>
+                </region>
+              </target>
+              <property container="/1/@nodes.14/@EOLElement/@body/@statements.0/@lhs" name="name">
+                <region>
+                  <start line="22" column="4"/>
+                  <end line="22" column="8"/>
+                </region>
+              </property>
+            </lhs>
+            <rhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.14/@EOLElement/@body/@statements.0">
+              <region>
+                <start line="22" column="11"/>
+                <end line="22" column="18"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/1/@nodes.14/@EOLElement/@body/@statements.0/@rhs" name="co">
+                <region>
+                  <start line="22" column="11"/>
+                  <end line="22" column="13"/>
+                </region>
+              </target>
+              <property container="/1/@nodes.14/@EOLElement/@body/@statements.0/@rhs" name="name">
+                <region>
+                  <start line="22" column="14"/>
+                  <end line="22" column="18"/>
+                </region>
+              </property>
+            </rhs>
+          </statements>
+        </body>
+      </EOLElement>
+    </nodes>
+    <nodes name="16" outgoing="/1/@nodes.16" incoming="/1/@nodes.14">
+      <EOLElement xsi:type="eol:StringExpression" value="Create TraceabilityLink for Competitor2Choice"/>
+    </nodes>
+    <nodes name="17" outgoing="/1/@nodes.17 /1/@nodes.13" incoming="/1/@nodes.15 /1/@nodes.14 /1/@nodes.17">
+      <EOLElement xsi:type="eol:StringExpression" value="Check TraceabilityLink for Competitor2Choice"/>
+    </nodes>
+    <nodes name="18" outgoing="/1/@nodes.16" incoming="/1/@nodes.16">
+      <EOLElement xsi:type="eol:AssignmentStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.1/@body"/>
+        <region>
+          <start line="22" column="1"/>
+          <end line="22" column="19"/>
+        </region>
+        <lhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.17/@EOLElement">
+          <region>
+            <start line="22" column="1"/>
+            <end line="22" column="8"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/1/@nodes.17/@EOLElement/@lhs" name="ch">
+            <region>
+              <start line="22" column="1"/>
+              <end line="22" column="3"/>
+            </region>
+          </target>
+          <property container="/1/@nodes.17/@EOLElement/@lhs" name="name">
+            <region>
+              <start line="22" column="4"/>
+              <end line="22" column="8"/>
+            </region>
+          </property>
+        </lhs>
+        <rhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.17/@EOLElement">
+          <region>
+            <start line="22" column="11"/>
+            <end line="22" column="18"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/1/@nodes.17/@EOLElement/@rhs" name="co">
+            <region>
+              <start line="22" column="11"/>
+              <end line="22" column="13"/>
+            </region>
+          </target>
+          <property container="/1/@nodes.17/@EOLElement/@rhs" name="name">
+            <region>
+              <start line="22" column="14"/>
+              <end line="22" column="18"/>
+            </region>
+          </property>
+        </rhs>
+      </EOLElement>
+    </nodes>
+    <nodes name="19" outgoing="/1/@nodes.19 /1/@nodes.20" incoming="/1/@nodes.2">
+      <EOLElement xsi:type="etl:TransformationRule">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#/"/>
+        <region>
+          <start line="18"/>
+          <end line="24" column="1"/>
+        </region>
+        <name container="/1/@nodes.18/@EOLElement" name="Competitor2Choice">
+          <region>
+            <start line="18" column="5"/>
+            <end line="18" column="22"/>
+          </region>
+        </name>
+        <source container="/1/@nodes.18/@EOLElement">
+          <region>
+            <start line="19" column="11"/>
+            <end line="19" column="38"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/1/@nodes.18/@EOLElement/@source" modelName="Competition" elementName="Competitor">
+            <region>
+              <start line="19" column="16"/>
+              <end line="19" column="38"/>
+            </region>
+          </resolvedType>
+          <name container="/1/@nodes.18/@EOLElement/@source" name="co">
+            <region>
+              <start line="19" column="11"/>
+              <end line="19" column="13"/>
+            </region>
+          </name>
+        </source>
+        <targets container="/1/@nodes.18/@EOLElement">
+          <region>
+            <start line="20" column="4"/>
+            <end line="20" column="21"/>
+          </region>
+          <resolvedType xsi:type="eol:ModelElementType" container="/1/@nodes.18/@EOLElement/@targets.0" modelName="TVApp" elementName="Choice">
+            <region>
+              <start line="20" column="9"/>
+              <end line="20" column="21"/>
+            </region>
+          </resolvedType>
+          <name container="/1/@nodes.18/@EOLElement/@targets.0" name="ch">
+            <region>
+              <start line="20" column="4"/>
+              <end line="20" column="6"/>
+            </region>
+          </name>
+        </targets>
+        <body container="/1/@nodes.18/@EOLElement">
+          <region>
+            <start line="22" column="1"/>
+            <end line="22" column="19"/>
+          </region>
+          <statements xsi:type="eol:AssignmentStatement" container="/1/@nodes.18/@EOLElement/@body">
+            <region>
+              <start line="22" column="1"/>
+              <end line="22" column="19"/>
+            </region>
+            <lhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.18/@EOLElement/@body/@statements.0">
+              <region>
+                <start line="22" column="1"/>
+                <end line="22" column="8"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/1/@nodes.18/@EOLElement/@body/@statements.0/@lhs" name="ch">
+                <region>
+                  <start line="22" column="1"/>
+                  <end line="22" column="3"/>
+                </region>
+              </target>
+              <property container="/1/@nodes.18/@EOLElement/@body/@statements.0/@lhs" name="name">
+                <region>
+                  <start line="22" column="4"/>
+                  <end line="22" column="8"/>
+                </region>
+              </property>
+            </lhs>
+            <rhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.18/@EOLElement/@body/@statements.0">
+              <region>
+                <start line="22" column="11"/>
+                <end line="22" column="18"/>
+              </region>
+              <target xsi:type="eol:NameExpression" container="/1/@nodes.18/@EOLElement/@body/@statements.0/@rhs" name="co">
+                <region>
+                  <start line="22" column="11"/>
+                  <end line="22" column="13"/>
+                </region>
+              </target>
+              <property container="/1/@nodes.18/@EOLElement/@body/@statements.0/@rhs" name="name">
+                <region>
+                  <start line="22" column="14"/>
+                  <end line="22" column="18"/>
+                </region>
+              </property>
+            </rhs>
+          </statements>
+        </body>
+      </EOLElement>
+    </nodes>
+    <nodes name="20" outgoing="/1/@nodes.20" incoming="/1/@nodes.18">
+      <EOLElement xsi:type="eol:StringExpression" value="Create TraceabilityLink for Competitor2Choice"/>
+    </nodes>
+    <nodes name="21" outgoing="/1/@nodes.21 /1/@nodes.22" incoming="/1/@nodes.19 /1/@nodes.18 /1/@nodes.21">
+      <EOLElement xsi:type="eol:StringExpression" value="Check TraceabilityLink for Competitor2Choice"/>
+    </nodes>
+    <nodes name="22" outgoing="/1/@nodes.20" incoming="/1/@nodes.20">
+      <EOLElement xsi:type="eol:AssignmentStatement">
+        <container href="/Competition2TVApp/transformation/Mutant53/ModifylazyGroup2Label.Competition2TVApp2.Mutant3.etl.model#//@transformationRules.1/@body"/>
+        <region>
+          <start line="22" column="1"/>
+          <end line="22" column="19"/>
+        </region>
+        <lhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.21/@EOLElement">
+          <region>
+            <start line="22" column="1"/>
+            <end line="22" column="8"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/1/@nodes.21/@EOLElement/@lhs" name="ch">
+            <region>
+              <start line="22" column="1"/>
+              <end line="22" column="3"/>
+            </region>
+          </target>
+          <property container="/1/@nodes.21/@EOLElement/@lhs" name="name">
+            <region>
+              <start line="22" column="4"/>
+              <end line="22" column="8"/>
+            </region>
+          </property>
+        </lhs>
+        <rhs xsi:type="eol:PropertyCallExpression" container="/1/@nodes.21/@EOLElement">
+          <region>
+            <start line="22" column="11"/>
+            <end line="22" column="18"/>
+          </region>
+          <target xsi:type="eol:NameExpression" container="/1/@nodes.21/@EOLElement/@rhs" name="co">
+            <region>
+              <start line="22" column="11"/>
+              <end line="22" column="13"/>
+            </region>
+          </target>
+          <property container="/1/@nodes.21/@EOLElement/@rhs" name="name">
+            <region>
+              <start line="22" column="14"/>
+              <end line="22" column="18"/>
+            </region>
+          </property>
+        </rhs>
+      </EOLElement>
+    </nodes>
+    <nodes name="end" incoming="/1/@nodes.20"/>
+  </CFG:CFG>
+</xmi:XMI>
