@@ -71,7 +71,10 @@ operation ETL!EOLElement createNode (right : Boolean, guard : Boolean, rule : ET
 	var node = new CFG!Node;
 	node.name = counter.toString();
 	CFG.nodes.add(node);
-	node.EOLElement = emfTool.getECoreUtil().copy(self);
+	if (self.type().name <> "StringExpression")
+		node.EOLElement = emfTool.getECoreUtil().copy(self);
+	else
+		node.EOLElement = self;
 
 	if (counter == 1)
 	{
