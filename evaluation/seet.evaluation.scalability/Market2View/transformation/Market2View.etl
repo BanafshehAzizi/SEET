@@ -1,0 +1,123 @@
+rule Market2Design
+transform m:mp!MarketPlace
+to v:view!Design{
+v.name=m.nombre;
+v.views=m.paginas.equivalent();
+}
+rule Promocion2View
+transform m:mp!Promocion
+to v:view!Layout{
+v.name=m.nombre;
+v.page=m.estilo;
+v.setDesignPromo(m);
+v.name.println();
+v.tipo.println();
+}
+rule Catalogo2View
+transform m:mp!Catalogo
+to v:view!Layout{
+v.name=m.nombre;
+v.page=m.estilo;
+v.setDesignCatalogo(m);
+v.name.println();
+}
+rule Contacto2View
+transform m:mp!Contacto
+to v:view!Layout{
+v.name=m.nombre;
+v.page=m.estilo;
+v.setDesignContacto(m);
+v.name.println();
+}
+rule Mapa2View
+transform m:mp!Mapa
+to v:view!Layout{
+v.name=m.nombre;
+v.page=m.estilo;
+v.setDesignMapa(m);
+v.name.println();
+}
+operation view!Layout setDesignPromo(f:mp!Promocion){
+	switch(f.estilo){
+		case 'empresarial':
+			self.background=view!Color#gray;
+			self.font=view!Color#white;
+			self.image=view!ImgSize#large;
+		case 'moderno':
+			self.background=view!Color#white;
+			self.font=view!Color#blue;
+			self.image=view!ImgSize#large;
+		case 'clasico':
+			self.background=view!Color#blue;
+			self.font=view!Color#white;
+			self.image=view!ImgSize#small;
+		case 'profesional':
+			self.background=view!Color#white;
+			self.font=view!Color#black;
+			self.image=view!ImgSize#small;
+	}
+	return null;
+}
+operation view!Layout setDesignCatalogo(f:mp!Catalogo){
+	switch(f.estilo){
+		case 'empresarial':
+			self.background=view!Color#gray;
+			self.font=view!Color#white;
+			self.image=view!ImgSize#large;
+		case 'moderno':
+			self.background=view!Color#white;
+			self.font=view!Color#blue;
+			self.image=view!ImgSize#large;
+		case 'clasico':
+			self.background=view!Color#blue;
+			self.font=view!Color#white;
+			self.image=view!ImgSize#small;
+		case 'profesional':
+			self.background=view!Color#white;
+			self.font=view!Color#black;
+			self.image=view!ImgSize#small;
+	}
+	return null;
+}
+operation view!Layout setDesignContacto(f:mp!Contacto){
+	switch(f.estilo){
+		case 'empresarial':
+			self.background=view!Color#gray;
+			self.font=view!Color#white;
+			self.image=view!ImgSize#large;
+		case 'moderno':
+			self.background=view!Color#white;
+			self.font=view!Color#blue;
+			self.image=view!ImgSize#large;
+		case 'clasico':
+			self.background=view!Color#blue;
+			self.font=view!Color#white;
+			self.image=view!ImgSize#small;
+		case 'profesional':
+			self.background=view!Color#white;
+			self.font=view!Color#black;
+			self.image=view!ImgSize#small;
+	}
+	return null;
+}
+operation view!Layout setDesignMapa(f:mp!Mapa){
+	switch(f.estilo){
+		case 'empresarial':
+			self.background=view!Color#gray;
+			self.font=view!Color#white;
+			self.image=view!ImgSize#large;
+		case 'moderno':
+			self.background=view!Color#white;
+			self.font=view!Color#blue;
+			self.image=view!ImgSize#large;
+		case 'clasico':
+			self.background=view!Color#blue;
+			self.font=view!Color#white;
+			self.image=view!ImgSize#small;
+		case 'profesional':
+			self.background=view!Color#white;
+			self.font=view!Color#black;
+			self.image=view!ImgSize#small;
+	}
+	return null;
+}

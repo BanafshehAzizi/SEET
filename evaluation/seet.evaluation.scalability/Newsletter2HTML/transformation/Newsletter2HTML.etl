@@ -1,0 +1,245 @@
+pre {
+	"Start ETL Newsletter2HTML".println();
+}
+rule Newsletter2HTML
+	transform
+		s:newsletter!Newsletter
+	to
+		t:html!HTML{
+			if(s.table <> null){
+				var table = s.table.equivalent();
+				t.htmlElements.add(table);
+			}
+		}
+@lazy
+rule Table2TABLE
+	transform
+		s1:newsletter!Table
+	to
+		t1:html!TABLE{
+			if(s1.width <> null){
+				if (s1.width > 0) {
+					t1.width = s1.width.asString();
+				}
+			}
+			if(s1.backgroundColor <> null){
+				t1.bgcolor = s1.backgroundColor.literal;
+			}
+			t1.align = "center";
+			t1.border = 0;
+			t1.cellpadding = "0";
+			t1.cellspacing = "0";
+			for(row in s1.rows){
+				t1.elements.add(row.equivalent());
+			}
+		}
+@lazy
+rule Row2TR
+	transform
+		s2:newsletter!Row
+	to
+		t2:html!TR{
+			if(s2.height <> null){
+				if (s2.height > 0) {
+					t2.height = s2.height.asString();
+				}
+			}
+			if(s2.backgroundColor <> null){
+				t2.bgcolor = s2.backgroundColor.literal;
+			}
+			if(s2.cells.size() > 1){
+				var tr = new html!TR;
+				for(cell in s2.cells){
+					tr.addElement(cell.equivalent());
+				}
+				t2.addElement(new html!TD);
+				var table = new html!TABLE;
+				table.cellspacing = "0";
+				table.cellpadding = "0";
+				t2.elements.add(table);
+				t2.elements.add(tr);
+			} else if(s2.cells.size() == 1){
+				t2.elements.add(s2.cells.first.equivalent());			
+			} else if(s2.cells.isEmpty()){
+				t2.elements.add(new html!TD);
+			}
+		}
+@lazy		
+rule Cell2TD
+	transform
+		s3:newsletter!Cell
+	to
+		t3:html!TD{
+			if(s3.width <> null){
+				if (s3.width > 0){
+					t3.width = s3.width.asString();
+				}
+			}
+			if(s3.backgroundColor <> null){
+				t3.bgcolor = s3.backgroundColor.literal;
+			}
+			t3.valign = s3.verticalAlignment.literal;
+			for(element in s3.elements){
+				var htmlElement : html!HTMLElement;
+				if(element.isTypeOf(newsletter!Text)){
+					htmlElement = element.getHtmlTextElement();
+				} else if(element.isTypeOf(newsletter!Button)){
+					htmlElement = element.getHtmlButtonElement();
+				} else if(element.isTypeOf(newsletter!Image)){
+					htmlElement = element.getHtmlImageElement();
+				} else if(element.isTypeOf(newsletter!Video)){
+					htmlElement = element.getHtmlVideoElement();
+				} else if(element.isTypeOf(newsletter!Divider)){
+					htmlElement = element.getHtmlDividerElement();
+				} 
+				t3.elements.add(htmlElement);
+			}
+		}
+post {
+	"Finish ETL Newsletter2HTML".println();
+}
+operation newsletter!Text getHtmlTextElement() : html!HTMLElement{
+	var p = new html!P;
+	p.align = self.align.literal;
+	if(self.height <> null){
+		if (self.height > 0) {
+			p.addStyle(html!StyleKey#lineHeight, self.height.toString() + "px");
+		}
+	}
+	if(self.height <> null){
+		if (self.width > 0) {
+			p.addStyle(html!StyleKey#width, self.width.toString() + "px");
+		}
+	}
+	if(self.textAlign <> null){
+		p.addStyle(html!StyleKey#textAlign, self.textAlign.literal);
+	}
+	if(self.link <> null){
+		var a = new html!A;
+		a.ref = self.link;
+		a.addStyle(html!StyleKey#textDecoration, "none");
+		p.elements.add(a);
+	}
+	if(self.bold){
+		p.elements.add(new html!B);
+	}
+	if(self.italic){
+		p.elements.add(new html!I);
+	}
+	if(self.underline){
+		p.elements.add(new html!U);
+	}
+	if(self.strikethrough){
+		p.elements.add(new html!S);
+	}
+	var font = new html!FONT;
+	font.value = self.content;
+	font.face = self.fontFamily.literal;
+	font.size = self.fontSize;
+	font.color = self.fontColor.literal;
+	font.addStyle(html!StyleKey#padding, "5px");
+	p.elements.add(font);
+	return p;
+}
+operation newsletter!Button getHtmlButtonElement() : html!HTMLElement{
+	if(self.link <> null){
+		self.text.link = self.link;
+	}
+	var p = self.text.getHtmlTextElement();
+	p.addStyle(html!StyleKey#textAlign, self.align.literal);
+	if(p.elements.get(0).isTypeOf(html!A)){
+		var a = p.elements.get(0);
+		a.addButtonStyles(self);
+	} else {
+		p.addButtonStyles(self);
+	}
+	return p;
+}
+operation html!HTMLElement addButtonStyles(button : newsletter!Button) {
+	self.addStyle(html!StyleKey#backgroundColor, button.color.literal);
+	self.addStyle(html!StyleKey#lineHeight, button.height.toString() + "px");
+	self.addStyle(html!StyleKey#width, button.width.toString() + "px");
+	self.addStyle(html!StyleKey#display, "inline-block");
+	self.addStyle(html!StyleKey#textDecoration, "none");
+	self.addStyle(html!StyleKey#textAlign, "center");
+} 
+operation newsletter!Image getHtmlImageElement() : html!HTMLElement{
+	var p = new html!P;
+	p.align = self.align.literal;
+	var img = new html!IMG;
+	img.src = self.src;
+	if(self.width <> null){
+		if (self.width > 0) {
+			img.width = self.width.toString();
+		}
+	} else {
+		img.width = "100%";
+	}
+	if(self.height <> null){
+		if(self.height > 0) {
+			img.height = self.height.toString();
+		}
+	} else {
+		img.height = "100%";
+	}
+	img.border = "0";
+	var a = new html!A;
+	if(self.link <> null){
+		a.ref = self.link;
+	} else {
+		a.ref = self.src;
+	}
+	p.elements.add(a);
+	p.elements.add(img);
+	return p;
+}
+operation newsletter!Video getHtmlVideoElement() : html!HTMLElement{
+	var preview = self.preview.getHtmlImageElement();
+	var title = self.title.getHtmlTextElement();
+	var button = self.button.getHtmlButtonElement();
+	if(self.link <> null){
+		self.preview.link = self.link;
+		self.button.link = self.link;
+	}
+	var div = new html!DIV;
+	div.align = self.align.literal;
+	div.addElement(preview);
+	div.addElement(title);
+	div.addElement(button);
+	div.addStyle(html!StyleKey#padding, "20px");
+	return div;
+}
+operation newsletter!Divider getHtmlDividerElement() : html!HTMLElement{
+	var table = new html!TABLE;
+	table.cellpadding = "10";
+	table.cellspacing = "0";
+	table.width = "100%";
+	var hr = new html!HR;
+	hr.color = self.color.literal; 
+	table.addElement(new html!TR);
+	table.elements.add(new html!TD);
+	table.elements.add(hr);
+	return table;
+}
+operation html!HTMLElement addStyle(key : Any, value : String){
+	var style = new html!Style;
+	style.key = key;
+	style.value = value;
+	var found = false;
+	for(style in self.styles){
+		if(style.key == key){
+			found = true;
+			style.value = value;
+		}
+	}
+	if(not found){
+		self.styles.add(style);
+	}
+}
+operation html!HTMLElement removeStyle(key : Any){
+	for(style in self.styles){
+		if(style.key == key){
+			self.styles.remove(style);
+		}
+	}
+}
