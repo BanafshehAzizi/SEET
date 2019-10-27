@@ -174,7 +174,7 @@ while(DFS.get('top') <> -1) {
 			var tr = ETL!TransformationRule.all.select(tr|tr.name.name == adjucent.EOLElement.value.substring(28)).first;
 			for (target in tr.targets)
 			{
-				if(not Traceability_Linkes-> exists (c|c.get("target")=target.resolvedType.elementName))//and ruleshun tr bashe
+				if(not Traceability_Linkes-> exists (c|c.get("target")=target.resolvedType.elementName))
 				{
 					var class = new Ecore!EClass;
 					class.name = target.resolvedType.elementName;
@@ -209,8 +209,13 @@ while(DFS.get('top') <> -1) {
 			}
 		}
 		else
-		if (adjucent.EOLElement.type().name == "OperationDefinition"){ //b nazar etefagh nemiofte
+		if (adjucent.EOLElement.type().name == "OperationDefinition"){
 			SymbolTable.push(Map {'name' = null});
+			for (param in adjucent.EOLElement.parameters)
+				if(param.resolvedType.type().name == "ModelElementType")
+					SymbolTable.push(Map {'name' = param.name.name, 'type' = param.resolvedType.elementName, 'value' = ''});
+				else
+					SymbolTable.push(Map {'name' = param.name.name, 'type' = param.type().name, 'value' = ''});
 		}	
 		else
 		if (DFS.peek().EOLElement.type().name == "TransformationRule"){
@@ -230,7 +235,7 @@ while(DFS.get('top') <> -1) {
 				DFS.push(adjucent);
 			}
 			else
-			if (adjucent.visited <> true)//kheily shak daram
+			if (adjucent.visited <> true)
 				ret =	adjucent.EOLElement.search(null);
 		}
 		adjucent.visited = true;
@@ -267,7 +272,8 @@ operation CFG!Node getAdjucent() : Any {
 			if (condition.type().name == "NotOperatorExpression")
 				ifCondition =  ifCondition.substring(0, 4) + ifCondition.substring(4, i).replace(target.name, searchType(condition)) + ifCondition.substring (i, ifCondition.length());
 			else
-				ifCondition = ifCondition.substring (0, i). replace (target.name, searchType(condition)) + ifCondition.substring (i, ifCondition.length());
+				if (not (condition.type().name == "MethodCallExpression" and Bag {"all", "allInstances"}.includes(condition.method.name)))
+					ifCondition = ifCondition.substring (0, i). replace (target.name, searchType(condition)) + ifCondition.substring (i, ifCondition.length());
 		}
 		else 
 		{
@@ -342,6 +348,19 @@ operation CFG!Node getAdjucent() : Any {
 				var ifCondition : String;
 				ifCondition = model2code.print(a);
 				ifCondition = ifCondition.replace("\n","");
+				var target : ETL!EOLElement = searchTarget(a);
+				var counter :Integer;
+				for (c in ifCondition.toCharSequence())
+				{
+					if (c == ".")
+						break;
+					counter++;
+				}
+				if (a.type().name == "NotOperatorExpression")
+					ifCondition =  ifCondition.substring(0, 4) + ifCondition.substring(4, counter).replace(target.name, searchType(a)) + ifCondition.substring (counter, ifCondition.length());
+				else
+					if (not (a.type().name == "MethodCallExpression" and Bag {"all", "allInstances"}.includes(a.method.name)))
+						ifCondition = ifCondition.substring (0, counter). replace (target.name, searchType(a)) + ifCondition.substring (counter, ifCondition.length());
 				var b : Sequence = Sequence {};
 				b.add(a);
 				var ifc : String;
@@ -416,7 +435,7 @@ operation CFG!Node getAdjucent() : Any {
 
 	if (self.outgoing[0].visited == false or (self.outgoing[0].name.asInteger() < self.name.asInteger()))
 		return self.outgoing[0];
-	else if (self.outgoing.size()> 1 and (self.outgoing[1].visited == false or (self.outgoing[1].EOLElement.type().name == "StringExpression" and self.outgoing[1].EOLElement.value.startsWith("Check TraceabilityLink"))) or (not Bag {"TransformationRule", "ForStatement", "IfStatement", "WhileStatement"}.includes(self.type().name) and self.EOLElement.hasEquivalent().notEmpty()))// 2 vojud dare?
+	else if (self.outgoing.size()> 1 and (self.outgoing[1].visited == false or (self.outgoing[1].EOLElement.type().name == "StringExpression" and self.outgoing[1].EOLElement.value.startsWith("Check TraceabilityLink"))) or (not Bag {"TransformationRule", "ForStatement", "IfStatement", "WhileStatement"}.includes(self.type().name) and self.EOLElement.hasEquivalent().notEmpty()))
 			return self.outgoing[1];
 		else
 			return null;
@@ -603,7 +622,7 @@ operation CFG!EOLElement search (r : ETL!TransformationRule) : Any {
 				case "PropertyCallExpression":	
 					switch (self.lhs.property.name.isAttribute ()){		
 						case true:
-							class = SymbolTable.lookup(self.lhs.target.name, "name") -> collect (t|t.get('type'))-> first().getEClass();
+							class = searchType(self.lhs).getEClass();
 							var exist : Boolean = false;
 							var a;
 							for (e in class.eAttributes)
@@ -621,7 +640,7 @@ operation CFG!EOLElement search (r : ETL!TransformationRule) : Any {
 							a.name = self.lhs.property.name;
 							if (exist <> true)
 							{	
-								a.defaultValueLiteral = self.rhs.search(r);
+								a.defaultValueLiteral = self.rhs.search(r).asString();
 						  		var attributeType = OUT_MM!EAttribute. allInstances() -> select (e|e.eContainingClass = class and e.name = a.name) -> collect (t|t.eType) -> first();
 						  		a.eType = attributeType;
 						  		class.eAttributes.add(a);
@@ -660,11 +679,11 @@ operation CFG!EOLElement search (r : ETL!TransformationRule) : Any {
 			  					}
 			  				}					  	
 					  	case false:		  	
-						  	if(self.lhs.isTypeOf(ETL!PropertyCallExpression))//b nazar miad ghabele hazf bashe!
+						  	if(self.lhs.isTypeOf(ETL!PropertyCallExpression))
 						  	{
 								if (self.lhs.target.type().name == "PropertyCallExpression")
 						  		{
-				  					var class1 = SymbolTable.lookup(searchTarget(self.lhs).name, "name") -> collect (t|t.get('type'))-> first();//bayad koli neveshte shavad
+				  					var class1 = SymbolTable.lookup(searchTarget(self.lhs).name, "name") -> collect (t|t.get('type'))-> first();
 									class = OUT_MM!EClass.all.select(c|c.name = class1).first.eReferences.select(r|r.name = self.lhs.target.property.name).first.collect(e|e.eType).first;
 								}
 								else
@@ -685,6 +704,8 @@ operation CFG!EOLElement search (r : ETL!TransformationRule) : Any {
 									a = new Ecore!EReference;
 									SymbolTable.lookup(searchTarget(self.lhs).name, "name").get('type').getEClass().eReferences.add(a);
 									a.name = self.lhs.property.name;
+									var ref = OUT_MM!EReference.allInstances() -> select (e|e.name = self.lhs.property.name)->first();
+									a.lowerBound = ref.lowerBound;
 									if (self.rhs.isKindOf(ETL!FeatureCallExpression) or self.rhs.isTypeOf(ETL!NameExpression))
 									a.eType = SymbolTable.lookup(searchTarget(self.rhs).name, "name").get('type').getEClass();
 									else
@@ -705,7 +726,16 @@ operation CFG!EOLElement search (r : ETL!TransformationRule) : Any {
 				case "NameExpression":
 					SymbolTable.lookup(self.lhs.name, "name").put("value",self.rhs.search(r));
 				case "VariableDeclarationExpression":
-					var newRecord = Map {'name' = self.lhs.name.name, 'type' = 	self.lhs.resolvedType.type().name.substring(0, (self.lhs.resolvedType.type().name.length())-4), 'value' = null};
+					var newRecord;
+					if(self.rhs.type().name == "NewExpression")
+					{
+						var class = new Ecore!EClass;
+						class.name = self.rhs.resolvedType.elementName;
+						package.eClassifiers.add(class);
+						newRecord = Map {'name' = self.lhs.name.name, 'type' = 	self.rhs.resolvedType.elementName, 'value' = self.rhs.resolvedType.elementName};
+					}
+					else
+						newRecord = Map {'name' = self.lhs.name.name, 'type' = 	self.lhs.resolvedType.type().name.substring(0, (self.lhs.resolvedType.type().name.length())-4), 'value' = null};
 					SymbolTable.push(newRecord);
 			}
 		case "SpecialAssignmentStatement":
@@ -832,6 +862,8 @@ operation CFG!EOLElement search (r : ETL!TransformationRule) : Any {
 			return self.value;
 		case "IntegerExpression":
 			return self.value;
+		case "EnumerationLiteralExpression":
+			return self.literal.name;
 		case "MethodCallExpression":
 			switch (self.method.name.isOperation()){
 				case true:
@@ -919,6 +951,11 @@ operation CFG!EOLElement search (r : ETL!TransformationRule) : Any {
 							if (adjucent.EOLElement.type().name == "OperationDefinition")
 							{
 								SymbolTable.push(Map {'name' = null});
+								for (param in ETL!OperationDefinition.allInstances()->select(o|o.name = self.method.name) ->collect(p|p.parameters))
+									if(param.resolvedType.type().name == "ModelElementType")
+										SymbolTable.push(Map {'name' = param.name.name, 'type' = param.resolvedType.elementName, 'value' = ''});
+									else
+										SymbolTable.push(Map {'name' = param.name.name, 'type' = param.type().name, 'value' = ''});
 							}	
 							else
 								ret = adjucent.EOLElement.search(null);
@@ -966,6 +1003,8 @@ operation CFG!EOLElement search (r : ETL!TransformationRule) : Any {
 						case "firstToUpperCase":
 							var cond = self.target.search(r) + ".firstToUpperCase()";
 							return cond;
+						case "toLowerCase":
+							return self.target.search(r) + ".toLowerCase()";
 						case "first":
 							var a = self.target.search(r);
 							if (a.isKindOf(Collection))
@@ -979,7 +1018,7 @@ operation CFG!EOLElement search (r : ETL!TransformationRule) : Any {
 							switch (self.target.isTypeOf(CFG!PropertyCallExpression)){  			
 							  	case true:		
 									var ref = IN_MM!EReference. allInstances() -> select (e|e.name = self.target.property.name)->first();
-									return rules.flatten -> select (r|r.source.resolvedType.elementName =ref.eType.name)->first().targets -> first().resolvedType.elementName.getEClass();
+									return rules.flatten -> select (r|ref.eType.name.getSubTypes().flatten().includes(r.source.resolvedType.elementName))->first().targets -> first().resolvedType.elementName.getEClass();
 							  	case false:
 									class = SymbolTable.lookup(searchTarget(self.target).name, "name") -> collect (t|t.get('type'))-> first().getInputClass();
 									return rules.flatten -> select (r|r.source.resolvedType.elementName = class.name)->first().targets -> first().resolvedType.elementName.getEClass();	  	
@@ -1019,6 +1058,19 @@ operation String includesKind(inc : String) : Boolean {
 	a.add(self);
 	a.add(self.getEClass().eSuperTypes -> collect (e|e.name));
 	return a.includes (inc);
+}
+
+operation Any getSubTypes() : Any {	
+	var a : OrderedSet;
+	a.add(self);
+	for (class in IN_MM!EClass.all)
+	{
+		if (class.eSuperTypes.name.includes(self))
+		{
+				a.add(class.name.getSubTypes().flatten);
+		}
+	}
+	return a.flatten;
 }
 
 operation ETL!EOLElement collectAllContainedElementsName() : Sequence(OclAny) {
@@ -1191,6 +1243,10 @@ operation etl2atl (exp : CFG!Expression) : Any {
 			var ocl = new ATLOutput!IntegerExp;
 			ocl.integerSymbol = exp.value;
 			return ocl;
+		case "BooleanExpression":
+			var ocl = new ATLOutput!BooleanExp;
+			ocl.booleanSymbol = exp.value;
+			return ocl;
 		case "NotOperatorExpression":
 			if (exp.expression.type().name == "MethodCallExpression")
 			{
@@ -1303,8 +1359,8 @@ operation etl2atl (exp : CFG!Expression) : Any {
 				var ocl = new ATLOutput!OperationCallExp;
 				ocl.operationName = "oclIsTypeOf";
 				etl2atl(exp.target).appliedProperty = ocl;
-				var arg = new ATLOutput!oclModelElement;
-				arg.name = exp.arguments.split("!").at(1);
+				var arg = new ATLOutput!OclModelElement;
+				arg.name = exp.arguments.at(0).name.split("!").at(1);
 				arg.parentOperation = ocl;
 				return ocl;
 			}
@@ -1388,7 +1444,7 @@ operation etl2atl (exp : CFG!Expression) : Any {
 					return ocl;
 				}
 			}
-			else if(exp.rhs.type().name == "StringExpression" or exp.rhs.type().name == "IntegerExpression")
+			else if(exp.rhs.type().name == "StringExpression" or exp.rhs.type().name == "IntegerExpression" or exp.rhs.type().name == "BooleanExpression")
 			{
 				var ocl = new ATLOutput!OperatorCallExp;
 				ocl.operationName = "=";
@@ -1445,14 +1501,20 @@ operation searchType(exp : ETL!EOLElement) : String{
 			if(SymbolTable.lookup(searchTarget(exp.target).name, "name") <> null)
 				return SymbolTable.lookup(searchTarget(exp.target).name, "name").get('type');
 			else
-				return null;
+			{ 	
+				var target = searchTarget(exp.target).name;
+				if (target.toCharSequence().count("!") <> 0)
+					return target.substring(target.indexOf('!')+1, target.length());
+				else
+					return null;
+			}
 		}	
 	}
 	else
 		if (exp.isKindOf(ETL!ExpressionOrStatementBlock) or exp.isTypeOf(ETL!NotOperatorExpression))
 			return searchType(exp.expression);
 		else
-			if(exp.isTypeOf(ETL!NotEqualsOperatorExpression) or exp.isTypeOf(ETL!EqualsOperatorExpression))
+			if(exp.isTypeOf(ETL!NotEqualsOperatorExpression) or exp.isTypeOf(ETL!EqualsOperatorExpression) or exp.isTypeOf(ETL!GreaterThanOperatorExpression) or exp.isTypeOf(ETL!LessThanOperatorExpression) or exp.isTypeOf(ETL!LessThanOrEqualToOperatorExpression) or exp.isTypeOf(ETL!GreaterThanOrEqualToOperatorExpression))
 			{
 				return searchType(exp.lhs);
 			}
@@ -1483,6 +1545,9 @@ operation PCExist(condition : String, guard: Boolean) : String
 					return 'No';
 				else
 					return 'Yes';
+			else
+				if (condition.toCharSequence().count('!') <> 0 and condition.indexOf('!') < condition.indexOf('.') and condition.substring(condition.indexOf('!')+1, condition.indexOf('.')) == condition1)
+					return p.get('value');
 		}
 			
 	}
@@ -1547,7 +1612,8 @@ operation CFG!EOLElement ConditionalStatement () {
 		if (condition.type().name == "NotOperatorExpression")
 			ifCondition =  ifCondition.substring(0, 4) + ifCondition.substring(4, i).replace(target.name, searchType(condition)) + ifCondition.substring (i, ifCondition.length());
 		else
-			ifCondition = ifCondition.substring (0, i). replace (target.name, searchType(condition)) + ifCondition.substring (i, ifCondition.length());
+			if (not (condition.type().name == "MethodCallExpression" and Bag {"all", "allInstances"}.includes(condition.method.name)))
+				ifCondition = ifCondition.substring (0, i). replace (target.name, searchType(condition)) + ifCondition.substring (i, ifCondition.length());
 	} else
 		ifCondition= condition.resolvedType.elementName;
 	var ifc : String;
@@ -1561,7 +1627,7 @@ operation CFG!EOLElement ConditionalStatement () {
 		var tempPC_Satisfy : String;
 		var not_tempPC_Satisfy : String;
 		if (self.type().name == "IfStatement" or self.type().name == "WhileStatement")
-			tempPC.add( Map{ 'condition' = condition, 'type' = searchType(condition), 'not' = false, 'value' = 'Yes', 'two-paths' = true, 'nodeNumber' = self.eContainer().name, 'rule' = false });//'for' = false
+			tempPC.add( Map{ 'condition' = condition, 'type' = searchType(condition), 'not' = false, 'value' = 'Yes', 'two-paths' = true, 'nodeNumber' = self.eContainer().name, 'rule' = false });
 		else if (self.type().name == "ForStatement")
 				tempPC.add( Map{ 'condition' = condition, 'type' = searchType(condition), 'not' = false, 'value' = 'Yes', 'two-paths' = true, 'nodeNumber' = self.eContainer().name, 'rule' = false, 'for' = true });
 		else
@@ -1616,7 +1682,7 @@ operation CFG!EOLElement ConditionalStatement () {
 			}
 			if (self.type().name == "ForStatement")
 			{
-				SymbolTable.push(Map {'name' = self.iterator.name.name, 'type' = self.condition.search(null), 'value' = ''});//r
+				SymbolTable.push(Map {'name' = self.iterator.name.name, 'type' = self.condition.search(null), 'value' = ''});
 			}
 			if (PCExist(ifCondition, false) == '')
 			{
@@ -1749,7 +1815,7 @@ operation ConstraintSolver1(PC : Sequence, end : Boolean) : Any {
 				}
 			}
 			allContainRef = eclass.eAllReferences -> select (r| r.eOpposite.isDefined() and r.eOpposite.containment = true)->size();
-			if (l > 1 or (l <> 1 and contain = true and (end or (notContainRef == allContainRef and allContainRef == eclass.eAllReferences.size))))//hatman tu ye rabete containment sherkat karde bashe!
+			if (l > 1 or (l <> 1 and contain = true and (end or (notContainRef == allContainRef and allContainRef == eclass.eAllReferences.size))))
 			{
 				Satisfy = false;
 				break;
@@ -1975,7 +2041,7 @@ operation ConstraintSolver1(PC : Sequence, end : Boolean) : Any {
 						ifCondition = model2code.print(p.get('condition'));
 				}	
 				var n : Boolean = true;
-				if (p.get('not') and (ifCondition.size() < 4 or (ifCondition.size() > 4 and ifCondition.substring(0,4) <> "not ")))// or (p.get('not') == false and ifCondition.substring(0,4) == "not ")
+				if (p.get('not') and (ifCondition.size() < 4 or (ifCondition.size() > 4 and ifCondition.substring(0,4) <> "not ")))
 					ifCondition = 'not ' + ifCondition;
 				else
 				{
@@ -2004,10 +2070,7 @@ operation ConstraintSolver1(PC : Sequence, end : Boolean) : Any {
 					ifCondition = ifCondition + '.allInstances() -> size() <> 0';
 				if (p.get('rule') == true)
 				{
-				//	if(p.get('not') == false)
 						ifCondition = ifCondition + '.allInstances() -> size() <> 0';
-				/*	else
-						ifCondition = ifCondition + '.allInstances() -> size() = 0'; */
 				}
 				if (not s.includes (ifCondition.replace(' ','')))
 				{
