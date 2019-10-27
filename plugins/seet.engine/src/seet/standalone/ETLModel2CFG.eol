@@ -262,9 +262,12 @@ operation ETL!EOLElement createNode (right : Boolean, guard : Boolean, rule : ET
 				counter++;
 			}
 			previousRightNode.add(node);
-			for (c in self.`default`.body.block.statements)
+			if (self.`default`.isDefined())
 			{
-				c.createNode(true, false, null, false);
+				for (c in self.`default`.body.block.statements)
+				{
+					c.createNode(true, false, null, false);
+				}
 			}
 			tempReturn.add(previousRightNode.last);
 			var begin;
@@ -391,7 +394,7 @@ operation ETL!EOLElement getType() : String {
 	{
 		if (c.type().name == "ForStatement" and self.name = c.iterator.name.name)
 		{
-			var ref = IN_MM!EReference.all.select (e|e.name = c.condition.property.name)->first();//bayad az class beresam b reference
+			var ref = IN_MM!EReference.all.select (e|e.name = c.condition.property.name)->first();
 			return ref.eType.name;
 		}
 		else
