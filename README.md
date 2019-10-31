@@ -10,6 +10,9 @@ The wiki provides technical documentation:
 * [User manual and screencasts](https://github.com/BanafshehAzizi/SEET/wiki/User-Manual)
 
 * [Building SEET from sources](https://github.com/BanafshehAzizi/SEET/wiki/Building-SEET-from-sources)
+
+A demo of the tool:
+<a href="https://youtu.be/ly3sZDPREaY">SEET Screencast</a>
 ## Related Work
 The following is the paper describing the technical details of SEET:
 
