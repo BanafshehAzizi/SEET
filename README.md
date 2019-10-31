@@ -2,6 +2,8 @@
 SEET is a tool for symbolic execution of ETL transformations. The tool is implemented as an Eclipse plugin.
 ## Installation
 Please see the INSTALL.md file in this directory.
+
+If you are not willing to install, the ready to be used RCP distribution (.zip) of SEET is available at <a href="https://drive.google.com/open?id=1oubIuQXPgcLrUD5tjHKkmQoFqNalGnP9">SEET RCP</a>.
 ## Usage
 Right click on an .etl file and select "SEET" from a pop-up menu.
 
