@@ -18,4 +18,4 @@ A demo of the tool:
 ## Related Work
 The following is the paper describing the technical details of SEET:
 
-SEET: Symbolic Execution of ETL Transformations. Banafsheh Azizi, Bahman Zamani, Shekoufeh Kolahdouz-Rahimi. Submitted to Journal of Systems and Software, 2019
+[SEET: Symbolic Execution of ETL Transformations](https://mdse.ui.ac.ir/seet-symbolic-execution-of-etl-transformations-4). Banafsheh Azizi, Bahman Zamani, Shekoufeh Kolahdouz-Rahimi. Journal of Systems and Software, 2020
